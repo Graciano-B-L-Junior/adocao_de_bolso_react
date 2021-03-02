@@ -1,11 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Button, TouchableOpacity, TextInput, ScrollView } from 'react-native';
+import CheckBox from '@react-native-community/checkbox';
 
 export default function Cadastro() {
 
     return (
-        <ScrollView style={{backgroundColor:'gray'}}>
+        <ScrollView style={{ backgroundColor: 'gray' }}>
             <View style={styles.container}>
                 <StatusBar hidden />
                 <View style={styles.headerTela}>
@@ -37,6 +38,46 @@ export default function Cadastro() {
                     </View>
 
                     <Text style={{ paddingTop: 50 }}>Perfil da criança</Text>
+
+                    <Text style={{ paddingTop: 25 }}>Sexo</Text>
+
+                    <View style={{ flexDirection: 'row', paddingTop: 15 }}>
+                        <TouchableOpacity style={{ width: '40%', height: 50, borderWidth: 1, justifyContent: 'center' }}>
+                            <Text style={{ textAlign: 'center' }}>Menino</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{ width: '40%', height: 50, borderWidth: 1, justifyContent: 'center' }}>
+                            <Text style={{ textAlign: 'center' }}>Menina</Text>
+                        </TouchableOpacity>
+                    </View>
+
+                    <Text style={{ paddingTop: 25 }}>Idade</Text>
+                    <View style={{paddingTop: 15}}>
+                        <View style={{ flexDirection: 'row'}}>
+                            <View style={{ flexDirection: 'row', width: '40%' }}>
+                                <CheckBox>
+                                </CheckBox>
+                                <Text style={{ paddingTop: 7 }}>0~1 ano</Text>
+                            </View>
+                            <View style={{ flexDirection: 'row', width: '40%' }}>
+                                <CheckBox>
+                                </CheckBox>
+                                <Text style={{ paddingTop: 7 }}>1~3 anos</Text>
+                            </View>
+                        </View>
+                        <View style={{ flexDirection: 'row'}}>
+                            <View style={{ flexDirection: 'row', width: '40%' }}>
+                                <CheckBox>
+                                </CheckBox>
+                                <Text style={{ paddingTop: 7 }}>3~5 anos</Text>
+                            </View>
+                            <View style={{ flexDirection: 'row', width: '40%' }}>
+                                <CheckBox>
+                                </CheckBox>
+                                <Text style={{ paddingTop: 7 }}>5~10 anos</Text>
+                            </View>
+                        </View>
+                    </View>
+
 
                 </View>
 

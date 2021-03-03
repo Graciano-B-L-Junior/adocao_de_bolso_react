@@ -20,14 +20,14 @@ export default function App() {
             <TextInput value="login" style={{ width: 150, height: 50, borderWidth: 1, marginTop: 15, paddingLeft: 5 }}></TextInput>
             <TextInput value="senha" style={{ width: 150, height: 50, borderWidth: 1, marginTop: 15, paddingLeft: 5 }}></TextInput>
             <View style={{ width: 100, paddingTop: 25 }}>
-              <Button onPress={()=>setTela('cadastro')} title="Login" style={styles.button}></Button>
+              <Button  title="Login" style={styles.button}></Button>
             </View>
 
             <TouchableOpacity style={{ paddingTop: 50 }}>
               <Text style={{ borderBottomWidth: 1, borderBottomColor: 'black' }}>Esqueci minha senha</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={{ paddingTop: 50 }}>
+            <TouchableOpacity onPress={()=>setTela('cadastro')} style={{ paddingTop: 50 }}>
               <Text style={{ borderBottomWidth: 1, borderBottomColor: 'black' }}>Novo usuário</Text>
             </TouchableOpacity>
           </View>
@@ -37,7 +37,7 @@ export default function App() {
   }
   else if(tela=='cadastro'){
     return(
-      <Cadastro></Cadastro>
+      <Cadastro tela={tela} setTela={setTela}></Cadastro>
     )
     
   }
@@ -49,8 +49,5 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'gray',
     justifyContent: 'center',
-  },
-  button: {
-
   }
 });

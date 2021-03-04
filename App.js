@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Button, TouchableOpacity, TextInput } from 'react-native';
 import Cadastro from './Cadastro';
+import Trilha from './Trilha';
 
 export default function App() {
 
@@ -20,7 +21,7 @@ export default function App() {
             <TextInput value="login" style={{ width: 150, height: 50, borderWidth: 1, marginTop: 15, paddingLeft: 5 }}></TextInput>
             <TextInput value="senha" style={{ width: 150, height: 50, borderWidth: 1, marginTop: 15, paddingLeft: 5 }}></TextInput>
             <View style={{ width: 100, paddingTop: 25 }}>
-              <Button  title="Login" style={styles.button}></Button>
+              <Button  title="Login" style={styles.button} onPress={()=>setTela('Trilha')}></Button>
             </View>
 
             <TouchableOpacity style={{ paddingTop: 50 }}>
@@ -39,7 +40,11 @@ export default function App() {
     return(
       <Cadastro tela={tela} setTela={setTela}></Cadastro>
     )
-    
+  }
+  else if(tela=='Trilha'){
+    return(
+      <Trilha tela={tela} setTela={setTela}></Trilha>
+    )
   }
 
 }

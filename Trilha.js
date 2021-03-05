@@ -12,17 +12,18 @@ export default function Trilha(props) {
 
     return (
         <View style={styles.container}>
+            <StatusBar hidden></StatusBar>
             <View style={styles.headerTela}>
-                <TouchableOpacity style={styles.btnInfo} onPress={() => props.setTela('inicio')}>
+                <TouchableOpacity style={styles.btnInfo} onPress={() => props.setTela('Contato')}>
                     <FontAwesome5 name="info-circle" size={24} color="black" />
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.btnPerfil} onPress={() => props.setTela('inicio')}>
                     <Ionicons name="person" size={24} color="black" />
                 </TouchableOpacity>
-                <Text>Adoção de bolso</Text>
+                <Text style={{fontSize:20}}>Adoção de bolso</Text>
             </View>
             <ScrollView>
-                <View style={{ paddingTop: 120,justifyContent:'center',alignItems:'center' }}>
+                <View style={{ paddingTop: 120, justifyContent: 'center', alignItems: 'center' }}>
                     <TouchableOpacity style={styles.btnBalaoTrilhaL}>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.btnBalaoTrilhaR}>
@@ -31,7 +32,7 @@ export default function Trilha(props) {
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.btnBalaoTrilhaR}>
                     </TouchableOpacity>
-                    <View style={{paddingBottom:150}}></View>
+                    <View style={{ paddingBottom: 150 }}></View>
                 </View>
             </ScrollView>
             <View style={styles.bottomNav}>
@@ -98,14 +99,14 @@ const styles = StyleSheet.create({
         width: 120,
         borderWidth: 2,
         borderRadius: 100,
-        right:90
+        right: 90
     },
     btnBalaoTrilhaR: {
         height: 120,
         width: 120,
         borderWidth: 2,
         borderRadius: 100,
-        left:90
+        left: 90
     },
 
 

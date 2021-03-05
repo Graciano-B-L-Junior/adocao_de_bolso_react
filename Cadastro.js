@@ -8,11 +8,12 @@ export default function Cadastro(props) {
 
     return (
         <View style={styles.container}>
+            <StatusBar hidden></StatusBar>
             <View style={styles.headerTela}>
                 <TouchableOpacity style={styles.btnVoltar} onPress={() => props.setTela('inicio')}>
                     <AntDesign name="back" size={24} color="black" />
                 </TouchableOpacity>
-                <Text>Tela de cadastro</Text>
+                <Text style={{fontSize:20}}>Tela de cadastro</Text>
             </View>
             <ScrollView>
                 <View style={{ backgroundColor: 'gray' }}>

@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, Button, TouchableOpacity, TextInput } from 'rea
 import Cadastro from './Cadastro';
 import Contato from './Contato';
 import Trilha from './Trilha';
+import MensagemEnviada from './MensagemEnviada';
 
 export default function App() {
 
@@ -22,7 +23,7 @@ export default function App() {
             <TextInput value="login" style={{ width: 150, height: 50, borderWidth: 1, marginTop: 15, paddingLeft: 5 }}></TextInput>
             <TextInput value="senha" style={{ width: 150, height: 50, borderWidth: 1, marginTop: 15, paddingLeft: 5 }}></TextInput>
             <View style={{ width: 100, paddingTop: 25 }}>
-              <Button title="Login" style={styles.button} onPress={() => setTela('Trilha')}></Button>
+              <Button title="Login" onPress={() => setTela('Trilha')}></Button>
             </View>
 
             <TouchableOpacity style={{ paddingTop: 50 }}>
@@ -47,10 +48,18 @@ export default function App() {
       <Trilha tela={tela} setTela={setTela}></Trilha>
     )
   }
-  else if (tela == 'Contato') { }
-  return (
-    <Contato tela={tela} setTela={setTela}></Contato>
-  )
+  else if (tela == 'Contato') {
+    return (
+      <Contato tela={tela} setTela={setTela}></Contato>
+    )
+  }
+  else if(tela=='MensagemEnviada'){
+    return(
+      <MensagemEnviada tela={tela} setTela={setTela}></MensagemEnviada>
+    )
+    
+  }
+
 }
 
 const styles = StyleSheet.create({

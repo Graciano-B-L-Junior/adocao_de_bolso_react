@@ -6,7 +6,7 @@ import { AntDesign } from '@expo/vector-icons';
 
 
 export default function Contato(props) {
-
+    
     return (
         <View style={styles.container}>
             <StatusBar hidden></StatusBar>
@@ -54,6 +54,21 @@ export default function Contato(props) {
                         www.angaad.org.br
                     </Text>
 
+
+                </View>
+                <View style={{ paddingTop: 30, paddingLeft: 20, paddingRight: 20 }}>
+                    <Text style={{ fontSize: 24 }}>Mande uma mensagem</Text>
+                    <Text style={{ fontSize: 18, paddingTop: 15 }}>*Preencha os campos corretamente</Text>
+                    <Text style={{ fontSize: 18, paddingTop: 15 }}>Nome</Text>
+                    <TextInput style={{ width: '100%', height: 50, borderWidth: 1, marginTop: 15 }}></TextInput>
+                    <Text style={{ fontSize: 18, paddingTop: 15 }}>E-mail</Text>
+                    <TextInput style={{ width: '100%', height: 50, borderWidth: 1, marginTop: 15 }}></TextInput>
+                    <Text style={{ fontSize: 18, paddingTop: 15 }}>Mensagem</Text>
+                    <TextInput style={{ width: '100%', height: 150, borderWidth: 1, marginTop: 15 }}></TextInput>
+
+                    <View style={{justifyContent:'center',width:'30%',paddingTop:30,position:'relative',left:'35%'}}>
+                        <Button title="Enviar" onPress={()=>props.setTela('MensagemEnviada')}></Button>
+                    </View>
 
                 </View>
                 <View style={{ paddingBottom: 100 }}></View>

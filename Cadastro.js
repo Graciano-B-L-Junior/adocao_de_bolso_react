@@ -16,7 +16,7 @@ export default function Cadastro(props) {
                 <Text style={{fontSize:20}}>Tela de cadastro</Text>
             </View>
             <ScrollView>
-                <View style={{ backgroundColor: 'gray' }}>
+                <View style={{ backgroundColor: 'white' }}>
                     <StatusBar hidden />
 
                     <View style={{ marginLeft: 20, marginTop: 100, width: '100%' }}>
@@ -111,7 +111,7 @@ export default function Cadastro(props) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'gray',
+        backgroundColor: 'white',
         alignItems: 'center'
     },
     headerTela: {
@@ -122,7 +122,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         position: 'absolute',
         top: 0,
-        zIndex: 99
+        zIndex: 99,
+        borderBottomWidth:1
     },
     inputTextStyle: {
         width: '80%',

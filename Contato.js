@@ -60,14 +60,16 @@ export default function Contato(props) {
                     <Text style={{ fontSize: 24 }}>Mande uma mensagem</Text>
                     <Text style={{ fontSize: 18, paddingTop: 15 }}>*Preencha os campos corretamente</Text>
                     <Text style={{ fontSize: 18, paddingTop: 15 }}>Nome</Text>
-                    <TextInput style={{ width: '100%', height: 50, borderWidth: 1, marginTop: 15 }}></TextInput>
+                    <TextInput style={{ width: '100%', height: 50, borderWidth: 1, marginTop: 15,borderRadius:25 }}></TextInput>
                     <Text style={{ fontSize: 18, paddingTop: 15 }}>E-mail</Text>
-                    <TextInput style={{ width: '100%', height: 50, borderWidth: 1, marginTop: 15 }}></TextInput>
+                    <TextInput style={{ width: '100%', height: 50, borderWidth: 1, marginTop: 15,borderRadius:25 }}></TextInput>
                     <Text style={{ fontSize: 18, paddingTop: 15 }}>Mensagem</Text>
-                    <TextInput style={{ width: '100%', height: 150, borderWidth: 1, marginTop: 15 }}></TextInput>
+                    <TextInput style={{ width: '100%', height: 150, borderWidth: 1, marginTop: 15,borderRadius:25 }}></TextInput>
 
-                    <View style={{justifyContent:'center',width:'30%',paddingTop:30,position:'relative',left:'35%'}}>
-                        <Button title="Enviar" onPress={()=>props.setTela('MensagemEnviada')}></Button>
+                    <View style={{justifyContent:'center',width:'30%',paddingTop:30,position:'relative',left:'35%',borderRadius:'50%'}}>
+                        <TouchableOpacity style={{width:'100%',backgroundColor:'black',height:30,borderRadius:25}} onPress={()=>props.setTela('MensagemEnviada')}>
+                            <Text style={{textAlign:'center',fontSize:20,color:'white'}}>Enviar</Text>
+                        </TouchableOpacity>
                     </View>
 
                 </View>
@@ -82,7 +84,7 @@ export default function Contato(props) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'gray',
+        backgroundColor: 'white',
     },
     headerTela: {
         width: '100%',
@@ -92,7 +94,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         position: 'absolute',
         top: 0,
-        zIndex: 99
+        zIndex: 99,
+        borderBottomWidth:1
     },
     inputTextStyle: {
         width: '80%',

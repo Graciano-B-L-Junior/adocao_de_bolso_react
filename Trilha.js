@@ -6,8 +6,6 @@ import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import CheckBox from '@react-native-community/checkbox';
-
 export default function Trilha(props) {
 
     return (
@@ -54,7 +52,7 @@ export default function Trilha(props) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'gray',
+        backgroundColor: 'white',
     },
     headerTela: {
         width: '100%',
@@ -64,7 +62,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         position: 'absolute',
         top: 0,
-        zIndex: 99
+        zIndex: 99,
+        borderBottomWidth:1
     },
     inputTextStyle: {
         width: '80%',
@@ -87,7 +86,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         position: 'absolute',
         bottom: 0,
-        zIndex: 99
+        zIndex: 99,
+        borderTopWidth:1
     },
     btnTrilha: {
         borderWidth: 2,

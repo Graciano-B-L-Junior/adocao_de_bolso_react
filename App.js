@@ -20,17 +20,19 @@ export default function App() {
           </View>
 
           <View style={{ alignItems: 'center', paddingTop: 50 }}>
-            <TextInput value="login" style={{ width: 150, height: 50, borderWidth: 1, marginTop: 15, paddingLeft: 5 }}></TextInput>
-            <TextInput value="senha" style={{ width: 150, height: 50, borderWidth: 1, marginTop: 15, paddingLeft: 5 }}></TextInput>
+            <TextInput value="login" style={{ width: 250, height: 40, borderWidth: 1, marginTop: 15, paddingLeft: 5,borderRadius:25 }}></TextInput>
+            <TextInput value="senha" style={{ width: 250, height: 40, borderWidth: 1, marginTop: 15, paddingLeft: 5,borderRadius:25 }}></TextInput>
             <View style={{ width: 100, paddingTop: 25 }}>
-              <Button title="Login" onPress={() => setTela('Trilha')}></Button>
+              <TouchableOpacity style={{ width: '100%', backgroundColor: 'black', height: 30, borderRadius: 25 }} onPress={() => setTela('Trilha')}>
+                <Text style={{ textAlign: 'center', fontSize: 20, color: 'white' }}>Login</Text>
+              </TouchableOpacity>
             </View>
 
             <TouchableOpacity style={{ paddingTop: 50 }}>
               <Text style={{ borderBottomWidth: 1, borderBottomColor: 'black' }}>Esqueci minha senha</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => setTela('cadastro')} style={{ paddingTop: 50 }}>
+            <TouchableOpacity onPress={() => setTela('cadastro')} style={{ paddingTop: 10 }}>
               <Text style={{ borderBottomWidth: 1, borderBottomColor: 'black' }}>Novo usuário</Text>
             </TouchableOpacity>
           </View>
@@ -53,11 +55,11 @@ export default function App() {
       <Contato tela={tela} setTela={setTela}></Contato>
     )
   }
-  else if(tela=='MensagemEnviada'){
-    return(
+  else if (tela == 'MensagemEnviada') {
+    return (
       <MensagemEnviada tela={tela} setTela={setTela}></MensagemEnviada>
     )
-    
+
   }
 
 }
@@ -65,7 +67,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'gray',
+    backgroundColor: 'white',
     justifyContent: 'center',
   }
 });

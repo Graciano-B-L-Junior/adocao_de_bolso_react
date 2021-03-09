@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button, TouchableOpacity, TextInput, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Button, TouchableOpacity, TextInput, ScrollView, Image } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
@@ -13,12 +13,14 @@ export default function Trilha(props) {
             <StatusBar hidden></StatusBar>
             <View style={styles.headerTela}>
                 <TouchableOpacity style={styles.btnInfo} onPress={() => props.setTela('Contato')}>
-                    <FontAwesome5 name="info-circle" size={24} color="black" />
+                    <Image style={styles.iconStyle} source={require('./assets/icones-20.png')}>
+                    </Image>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.btnPerfil} onPress={() => props.setTela('inicio')}>
-                    <Ionicons name="person" size={24} color="black" />
+                    <Image style={styles.iconStyle} source={require('./assets/icones-21.png')}>
+                    </Image>
                 </TouchableOpacity>
-                <Text style={{fontSize:20}}>Adoção de bolso</Text>
+                <Text style={{ fontSize: 20 }}>Adoção de bolso</Text>
             </View>
             <ScrollView>
                 <View style={{ paddingTop: 120, justifyContent: 'center', alignItems: 'center' }}>
@@ -35,13 +37,16 @@ export default function Trilha(props) {
             </ScrollView>
             <View style={styles.bottomNav}>
                 <TouchableOpacity style={styles.btnInfo} onPress={() => props.setTela('inicio')}>
-                    <MaterialCommunityIcons name="lightbulb-on-outline" size={40} color="black" />
+                    <Image style={styles.iconStyle} source={require('./assets/icones-18.png')}>
+                    </Image>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.btnTrilha}>
-                    <Ionicons name="trail-sign" size={80} color="black" />
+                    <Image style={styles.iconStyleTrilha} source={require('./assets/icones-17.png')}>
+                    </Image>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.btnPerfil} onPress={() => props.setTela('inicio')}>
-                    <AntDesign name="questioncircle" size={40} color="black" />
+                    <Image style={styles.iconStyle} source={require('./assets/icones-16.png')}>
+                    </Image>
                 </TouchableOpacity>
             </View>
         </View>
@@ -63,7 +68,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         top: 0,
         zIndex: 99,
-        borderBottomWidth:1
+        borderBottomWidth: 1
     },
     inputTextStyle: {
         width: '80%',
@@ -87,12 +92,16 @@ const styles = StyleSheet.create({
         position: 'absolute',
         bottom: 0,
         zIndex: 99,
-        borderTopWidth:1
+        borderTopWidth: 1
     },
     btnTrilha: {
         borderWidth: 2,
         borderRadius: 50,
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        width: 90,
+        height: 90,
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     btnBalaoTrilhaL: {
         height: 120,
@@ -108,6 +117,13 @@ const styles = StyleSheet.create({
         borderRadius: 100,
         left: 90
     },
-
+    iconStyle: {
+        width: 42,
+        height: 42
+    },
+    iconStyleTrilha: {
+        width: 70,
+        height: 70
+    }
 
 });

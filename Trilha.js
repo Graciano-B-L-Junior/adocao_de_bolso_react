@@ -1,10 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Button, TouchableOpacity, TextInput, ScrollView, Image } from 'react-native';
-import { FontAwesome5 } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
-import { AntDesign } from '@expo/vector-icons';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function Trilha(props) {
 
@@ -20,7 +16,7 @@ export default function Trilha(props) {
                     <Image style={styles.iconStyle} source={require('./assets/icones-21.png')}>
                     </Image>
                 </TouchableOpacity>
-                <Text style={{ fontSize: 20 }}>Adoção de bolso</Text>
+                <Text style={{ fontSize: 20,fontFamily:'Inter_500Medium' }}>Adoção de bolso</Text>
             </View>
             <ScrollView>
                 <View style={{ paddingTop: 120, justifyContent: 'center', alignItems: 'center' }}>

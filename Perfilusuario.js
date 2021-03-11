@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Button, TouchableOpacity, TextInput, ScrollView
 import { AntDesign } from '@expo/vector-icons';
 import CheckBox from '@react-native-community/checkbox';
 
-export default function Cadastro(props) {
+export default function Perfilusuario(props) {
 
     return (
         <View style={styles.container}>
@@ -13,7 +13,7 @@ export default function Cadastro(props) {
                 <TouchableOpacity style={styles.btnVoltar} onPress={() => props.setTela('inicio')}>
                     <AntDesign name="back" size={24} color="black" />
                 </TouchableOpacity>
-                <Text style={{fontSize:20,fontFamily:'Inter_500Medium'}}>Tela de cadastro</Text>
+                <Text style={{fontSize:20,fontFamily:'Inter_500Medium'}}>Perfil</Text>
             </View>
             <ScrollView>
                 <View style={{ backgroundColor: 'white' }}>
@@ -97,7 +97,7 @@ export default function Cadastro(props) {
                             </View>
                         </View>
                         <View style={{ width: '80%', marginTop: 15, marginBottom: 15, justifyContent: 'center' }}>
-                            <Button title="Cadastrar" onPress={() => props.setTela('inicio')}></Button>
+                            <Button title="Atualizar" onPress={() => props.setTela('Trilha')}></Button>
                         </View>
                     </View>
                 </View>

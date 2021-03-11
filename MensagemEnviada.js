@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button, TouchableOpacity, TextInput, ScrollView } from 'react-native';
+import { StyleSheet, Text, View,TouchableOpacity} from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
 
@@ -14,11 +14,11 @@ export default function MensagemEnviada(props) {
                 <TouchableOpacity style={styles.btnInfo} onPress={() => props.setTela('Contato')}>
                     <AntDesign name="back" size={24} color="black" />
                 </TouchableOpacity>
-                <Text style={{ fontSize: 20 }}>Contatos</Text>
+                <Text style={{ fontSize: 20,fontFamily:'Inter_500Medium' }}>Contatos</Text>
             </View>
             <View style={{paddingTop:100,alignItems:'center'}}>
-                <Text style={{fontSize:26}}>Mensagem Enviada!</Text>
-                <Text style={{fontSize:18,paddingTop:15,width:'80%',textAlign:'center'}}>Obrigado por entrar em contato e a ONG dará um retorno o mais rápido possivel</Text>
+                <Text style={{fontSize:26,fontFamily:'Inter_500Medium'}}>Mensagem Enviada!</Text>
+                <Text style={{fontSize:18,paddingTop:15,width:'80%',textAlign:'center',fontFamily:'Inter_500Medium'}}>Obrigado por entrar em contato e a ONG dará um retorno o mais rápido possivel</Text>
             </View>
         </View>
 

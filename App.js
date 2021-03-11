@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button, TouchableOpacity, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, TextInput } from 'react-native';
 import Cadastro from './Cadastro';
 import Contato from './Contato';
 import Trilha from './Trilha';
 import MensagemEnviada from './MensagemEnviada';
-import { AppLoading } from 'expo-app-loading';
+import AppLoading from 'expo-app-loading';
 import {
   useFonts,
   Inter_100Thin,
@@ -18,8 +18,12 @@ import {
   Inter_800ExtraBold,
   Inter_900Black,
 } from '@expo-google-fonts/inter';
+import NovaSenha from './NovaSenha';
+import Perfilusuario from './Perfilusuario';
+import DicasCulturais from './DicasCulturais';
 
 export default function App() {
+
   let [fontsLoaded] = useFonts({
     Inter_100Thin,
     Inter_200ExtraLight,
@@ -34,7 +38,7 @@ export default function App() {
 
   const [tela, setTela] = useState('inicio')
   if (!fontsLoaded) {
-    return <AppLoading></AppLoading>
+    return (<AppLoading></AppLoading>)
   } else {
     if (tela == 'inicio') {
       return (
@@ -54,7 +58,7 @@ export default function App() {
                 </TouchableOpacity>
               </View>
 
-              <TouchableOpacity style={{ paddingTop: 50 }}>
+              <TouchableOpacity style={{ paddingTop: 50 }} onPress={()=>setTela('NovaSenha')}>
                 <Text style={{ borderBottomWidth: 1, borderBottomColor: 'black' }}>Esqueci minha senha</Text>
               </TouchableOpacity>
 
@@ -86,6 +90,21 @@ export default function App() {
         <MensagemEnviada tela={tela} setTela={setTela}></MensagemEnviada>
       )
 
+    }
+    else if(tela =='NovaSenha'){
+      return(
+        <NovaSenha tela={tela} setTela={setTela}></NovaSenha>
+      )
+    }
+    else if(tela == 'Perfilusuario'){
+      return(
+        <Perfilusuario tela={tela} setTela={setTela}></Perfilusuario>
+      )
+    }
+    else if(tela =='DicasCulturais'){
+      return(
+        <DicasCulturais tela={tela} setTela={setTela} ></DicasCulturais>
+      )
     }
   }
 

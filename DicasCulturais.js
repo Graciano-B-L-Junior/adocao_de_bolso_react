@@ -1,43 +1,31 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button, TouchableOpacity, TextInput, ScrollView, Image } from 'react-native';
+import { StyleSheet, Text, View,TouchableOpacity,Image} from 'react-native';
+import { AntDesign } from '@expo/vector-icons';
 
-export default function Trilha(props) {
+
+
+export default function DicasCulturais(props) {
 
     return (
         <View style={styles.container}>
             <StatusBar hidden></StatusBar>
             <View style={styles.headerTela}>
                 <TouchableOpacity style={styles.btnInfo} onPress={() => props.setTela('Contato')}>
-                    <Image style={styles.iconStyle} source={require('./assets/icones-20.png')}>
-                    </Image>
+                    <AntDesign name="back" size={24} color="black" />
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.btnPerfil} onPress={() => props.setTela('Perfilusuario')}>
-                    <Image style={styles.iconStyle} source={require('./assets/icones-21.png')}>
-                    </Image>
-                </TouchableOpacity>
-                <Text style={{ fontSize: 20,fontFamily:'Inter_500Medium' }}>Adoção de bolso</Text>
+                <Text style={{ fontSize: 20,fontFamily:'Inter_500Medium' }}>Dicas Culturais</Text>
             </View>
-            <ScrollView>
-                <View style={{ paddingTop: 120, justifyContent: 'center', alignItems: 'center' }}>
-                    <TouchableOpacity style={styles.btnBalaoTrilhaL}>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.btnBalaoTrilhaR}>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.btnBalaoTrilhaL}>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.btnBalaoTrilhaR}>
-                    </TouchableOpacity>
-                    <View style={{ paddingBottom: 150 }}></View>
-                </View>
-            </ScrollView>
+            <View style={{paddingTop:100,alignItems:'center'}}>
+                
+            </View>
             <View style={styles.bottomNav}>
                 <TouchableOpacity style={styles.btnInfo} onPress={() => props.setTela('DicasCulturais')}>
                     <Image style={styles.iconStyle} source={require('./assets/icones-18.png')}>
                     </Image>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.btnTrilha}>
-                    <Image style={styles.iconStyleTrilha} source={require('./assets/icones-17.png')}>
+                <TouchableOpacity style={styles.btnTrilha} onPress={()=>props.setTela('Trilha')}>
+                    <Image style={styles.iconStyleTrilha} source={require('./assets/icones-22.png')}>
                     </Image>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.btnPerfil} onPress={() => props.setTela('inicio')}>

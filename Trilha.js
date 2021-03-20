@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button, TouchableOpacity, TextInput, ScrollView, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, ScrollView, Image } from 'react-native';
 
 export default function Trilha(props) {
 
@@ -40,7 +40,7 @@ export default function Trilha(props) {
                     <Image style={styles.iconStyleTrilha} source={require('./assets/icones-17.png')}>
                     </Image>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.btnPerfil} onPress={() => props.setTela('inicio')}>
+                <TouchableOpacity style={styles.btnPerfil} onPress={() => props.setTela('PerguntasFrequentes')}>
                     <Image style={styles.iconStyle} source={require('./assets/icones-16.png')}>
                     </Image>
                 </TouchableOpacity>
@@ -63,8 +63,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         position: 'absolute',
         top: 0,
-        zIndex: 99,
-        borderBottomWidth: 1
+        zIndex: 99
     },
     inputTextStyle: {
         width: '80%',

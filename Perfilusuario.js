@@ -21,32 +21,32 @@ export default function Perfilusuario(props) {
 
                     <View style={{ marginLeft: 20, marginTop: 100, width: '100%' }}>
                         <View style={{ paddingTop: 20 }}>
-                            <Text style={{fontFamily:'Inter_500Medium'}}>Nome</Text>
+                            <Text style={{fontFamily:'Inter_500Medium',paddingLeft:15}}>Nome</Text>
                             <TextInput style={styles.inputTextStyle}></TextInput>
                         </View>
                         <View style={{ paddingTop: 20 }}>
-                            <Text style={{fontFamily:'Inter_500Medium'}}>Email</Text>
+                            <Text style={{fontFamily:'Inter_500Medium',paddingLeft:15}}>Email</Text>
                             <TextInput style={styles.inputTextStyle}></TextInput>
                         </View>
                         <View style={{ paddingTop: 20 }}>
-                            <Text style={{fontFamily:'Inter_500Medium'}}>Senha</Text>
+                            <Text style={{fontFamily:'Inter_500Medium',paddingLeft:15}}>Senha</Text>
                             <TextInput style={styles.inputTextStyle}></TextInput>
                         </View>
 
-                        <Text style={{ paddingTop: 50, fontFamily:'Inter_500Medium' }}>Informações pessoais</Text>
+                        <Text style={{ paddingTop: 50, fontFamily:'Inter_500Medium',paddingLeft:55 }}>Informações pessoais</Text>
 
                         <View style={{ paddingTop: 20 }}>
-                            <Text style={{fontFamily:'Inter_500Medium'}}>idade</Text>
+                            <Text style={{fontFamily:'Inter_500Medium',paddingLeft:15}}>idade</Text>
                             <TextInput style={styles.inputTextStyle}></TextInput>
                         </View>
                         <View style={{ paddingTop: 20 }}>
-                            <Text style={{fontFamily:'Inter_500Medium'}}>Estado civil</Text>
+                            <Text style={{fontFamily:'Inter_500Medium',paddingLeft:15}}>Estado civil</Text>
                             <TextInput style={styles.inputTextStyle}></TextInput>
                         </View>
 
-                        <Text style={{ paddingTop: 50,fontFamily:'Inter_500Medium' }}>Perfil da criança</Text>
+                        <Text style={{ paddingTop: 50,fontFamily:'Inter_500Medium',paddingLeft:75 }}>Perfil da criança</Text>
 
-                        <Text style={{ paddingTop: 25, fontFamily:'Inter_500Medium' }}>Sexo</Text>
+                        <Text style={{ paddingTop: 25, fontFamily:'Inter_500Medium',paddingLeft:15 }}>Sexo</Text>
 
                         <View style={{ flexDirection: 'row', paddingTop: 15 }}>
                             <TouchableOpacity style={{ width: '40%', height: 50, borderWidth: 1, justifyContent: 'center' }}>
@@ -57,8 +57,8 @@ export default function Perfilusuario(props) {
                             </TouchableOpacity>
                         </View>
 
-                        <Text style={{ paddingTop: 25,fontFamily:'Inter_500Medium' }}>Idade</Text>
-                        <View style={{ paddingTop: 15 }}>
+                        <Text style={{ paddingTop: 25,fontFamily:'Inter_500Medium',paddingLeft:15 }}>Idade</Text>
+                        <View style={{ paddingTop: 15,paddingLeft:15 }}>
                             <View style={{ flexDirection: 'row' }}>
                                 <View style={{ flexDirection: 'row', width: '40%' }}>
                                     <CheckBox>
@@ -128,7 +128,8 @@ const styles = StyleSheet.create({
     inputTextStyle: {
         width: '80%',
         height: 50,
-        borderWidth: 1
+        borderWidth: 1,
+        borderRadius:50
     },
     btnVoltar: {
         position: 'absolute',

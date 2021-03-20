@@ -21,6 +21,7 @@ import {
 import NovaSenha from './NovaSenha';
 import Perfilusuario from './Perfilusuario';
 import DicasCulturais from './DicasCulturais';
+import PerguntasFrequentes from './PerguntasFrequentes';
 
 export default function App() {
 
@@ -104,6 +105,11 @@ export default function App() {
     else if(tela =='DicasCulturais'){
       return(
         <DicasCulturais tela={tela} setTela={setTela} ></DicasCulturais>
+      )
+    }
+    else if(tela =='PerguntasFrequentes'){
+      return(
+        <PerguntasFrequentes tela={tela} setTela={setTela} ></PerguntasFrequentes>
       )
     }
   }

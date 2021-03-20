@@ -1,53 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View,TouchableOpacity,Image, ScrollView} from 'react-native';
-import { AntDesign } from '@expo/vector-icons';
+import { StyleSheet, Text, View, TouchableOpacity, ScrollView, Image } from 'react-native';
 
-
-
-export default function DicasCulturais(props) {
-
+export default function PerguntasFrequentes(props){
     return (
         <View style={styles.container}>
             <StatusBar hidden></StatusBar>
             <View style={styles.headerTela}>
-                <Text style={{ fontSize: 20,fontFamily:'Inter_500Medium' }}>Dicas Culturais</Text>
+                <Text style={{ fontSize: 20,fontFamily:'Inter_500Medium' }}>Perguntas Frequentes</Text>
             </View>
-            <ScrollView>
-            <View style={{paddingTop:70}}>
-                <View>
-                    <Text style={{marginLeft:10,marginBottom:10}}>Documentários</Text>
-                </View>
-                <ScrollView horizontal={true}>
-                    <View style={styles.iconTemplate}></View>
-                    <View style={styles.iconTemplate}></View>
-                    <View style={styles.iconTemplate}></View>
-                    <View style={styles.iconTemplate}></View>
-                </ScrollView>
-            </View>
-            <View style={{paddingTop:30}}>
-                <View>
-                    <Text style={{marginLeft:10,marginBottom:10}}>Filmes</Text>
-                </View>
-                <ScrollView horizontal={true}>
-                    <View style={styles.iconTemplate}></View>
-                    <View style={styles.iconTemplate}></View>
-                    <View style={styles.iconTemplate}></View>
-                    <View style={styles.iconTemplate}></View>
-                </ScrollView>
-            </View>
-            <View style={{paddingTop:30,paddingBottom:100}}>
-                <View>
-                    <Text style={{marginLeft:10,marginBottom:10}}>Séries</Text>
-                </View>
-                <ScrollView horizontal={true}>
-                    <View style={styles.iconTemplate}></View>
-                    <View style={styles.iconTemplate}></View>
-                    <View style={styles.iconTemplate}></View>
-                    <View style={styles.iconTemplate}></View>
-                </ScrollView>
-            </View>
-            </ScrollView>
             <View style={styles.bottomNav}>
                 <TouchableOpacity style={styles.btnInfo} onPress={() => props.setTela('DicasCulturais')}>
                     <Image style={styles.iconStyle} source={require('./assets/icones-18.png')}>
@@ -58,7 +19,7 @@ export default function DicasCulturais(props) {
                     </Image>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.btnPerfil} onPress={() => props.setTela('PerguntasFrequentes')}>
-                    <Image style={styles.iconStyle} source={require('./assets/icones-16.png')}>
+                    <Image style={styles.iconStyle} source={require('./assets/icones-19.png')}>
                     </Image>
                 </TouchableOpacity>
             </View>

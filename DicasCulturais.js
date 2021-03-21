@@ -19,15 +19,73 @@ export default function DicasCulturais(props) {
                     <Text style={{marginLeft:10,marginBottom:10}}>Documentários</Text>
                 </View>
                 <ScrollView horizontal={true}>
+                    <View style={styles.iconTemplate}>
+                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/doc1.png')}></Image>
+                    </View>
+                    <View style={styles.iconTemplate}>
+                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/doc2.png')}></Image>
+                    </View>
+                    <View style={styles.iconTemplate}>
+                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/doc3.png')}></Image>
+                    </View>
+                    <View style={styles.iconTemplate}>
+                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/doc4.png')}></Image>
+                    </View>
+                    <View style={styles.iconTemplate}>
+                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/doc5.png')}></Image>
+                    </View>
+                    <View style={styles.iconTemplate}>
+                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/doc6.png')}></Image>
+                    </View>
+                    <View style={styles.iconTemplate}>
+                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/doc7.png')}></Image>
+                    </View>
                     <View style={styles.iconTemplate}></View>
                     <View style={styles.iconTemplate}></View>
                     <View style={styles.iconTemplate}></View>
-                    <View style={styles.iconTemplate}></View>
+                    
                 </ScrollView>
             </View>
             <View style={{paddingTop:30}}>
                 <View>
                     <Text style={{marginLeft:10,marginBottom:10}}>Filmes</Text>
+                </View>
+                <ScrollView horizontal={true}>
+                    <View style={styles.iconTemplate}>
+                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/filme1.jpg')}></Image>
+                    </View>
+                    <View style={styles.iconTemplate}>
+                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/filme2.jpg')}></Image>
+                    </View>
+                    <View style={styles.iconTemplate}>
+                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/filme3.jpg')}></Image>
+                    </View>
+                    <View style={styles.iconTemplate}>
+                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/filme4.jpg')}></Image>
+                    </View>
+                    <View style={styles.iconTemplate}>
+                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/filme5.jpg')}></Image>
+                    </View>
+                    <View style={styles.iconTemplate}>
+                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/filme6.jpg')}></Image>
+                    </View>
+                    <View style={styles.iconTemplate}>
+                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/filme7.jpg')}></Image>
+                    </View>
+                    <View style={styles.iconTemplate}>
+                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/filme8.jpg')}></Image>
+                    </View>
+                    <View style={styles.iconTemplate}>
+                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/filme9.jpg')}></Image>
+                    </View>
+                    <View style={styles.iconTemplate}>
+                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/filme10.jpg')}></Image>
+                    </View>
+                </ScrollView>
+            </View>
+            <View style={{paddingTop:30}}>
+                <View>
+                    <Text style={{marginLeft:10,marginBottom:10}}>Séries</Text>
                 </View>
                 <ScrollView horizontal={true}>
                     <View style={styles.iconTemplate}></View>
@@ -38,13 +96,12 @@ export default function DicasCulturais(props) {
             </View>
             <View style={{paddingTop:30,paddingBottom:100}}>
                 <View>
-                    <Text style={{marginLeft:10,marginBottom:10}}>Séries</Text>
+                    <Text style={{marginLeft:10,marginBottom:10}}>Livros</Text>
                 </View>
                 <ScrollView horizontal={true}>
-                    <View style={styles.iconTemplate}></View>
-                    <View style={styles.iconTemplate}></View>
-                    <View style={styles.iconTemplate}></View>
-                    <View style={styles.iconTemplate}></View>
+                    <View style={styles.iconTemplate}>
+                        
+                    </View>
                 </ScrollView>
             </View>
             </ScrollView>

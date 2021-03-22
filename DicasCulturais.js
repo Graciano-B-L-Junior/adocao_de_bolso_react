@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View,TouchableOpacity,Image, ScrollView} from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Image, ScrollView } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
 
@@ -11,106 +11,157 @@ export default function DicasCulturais(props) {
         <View style={styles.container}>
             <StatusBar hidden></StatusBar>
             <View style={styles.headerTela}>
-                <Text style={{ fontSize: 20,fontFamily:'Inter_500Medium' }}>Dicas Culturais</Text>
+                <Text style={{ fontSize: 20, fontFamily: 'Inter_500Medium' }}>Dicas Culturais</Text>
             </View>
             <ScrollView>
-            <View style={{paddingTop:70}}>
-                <View>
-                    <Text style={{marginLeft:10,marginBottom:10}}>Documentários</Text>
+                <View style={{ paddingTop: 70 }}>
+                    <View>
+                        <Text style={{ marginLeft: 10, marginBottom: 10 }}>Documentários</Text>
+                    </View>
+                    <ScrollView horizontal={true}>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/documentarios/doc1.png')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/documentarios/doc2.png')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/documentarios/doc3.png')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/documentarios/doc4.png')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/documentarios/doc5.png')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/documentarios/doc6.png')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/documentarios/doc7.png')}></Image>
+                        </View>
+
+                    </ScrollView>
                 </View>
-                <ScrollView horizontal={true}>
-                    <View style={styles.iconTemplate}>
-                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/doc1.png')}></Image>
+                <View style={{ paddingTop: 30 }}>
+                    <View>
+                        <Text style={{ marginLeft: 10, marginBottom: 10 }}>Filmes</Text>
                     </View>
-                    <View style={styles.iconTemplate}>
-                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/doc2.png')}></Image>
-                    </View>
-                    <View style={styles.iconTemplate}>
-                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/doc3.png')}></Image>
-                    </View>
-                    <View style={styles.iconTemplate}>
-                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/doc4.png')}></Image>
-                    </View>
-                    <View style={styles.iconTemplate}>
-                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/doc5.png')}></Image>
-                    </View>
-                    <View style={styles.iconTemplate}>
-                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/doc6.png')}></Image>
-                    </View>
-                    <View style={styles.iconTemplate}>
-                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/doc7.png')}></Image>
-                    </View>
-                    <View style={styles.iconTemplate}></View>
-                    <View style={styles.iconTemplate}></View>
-                    <View style={styles.iconTemplate}></View>
-                    
-                </ScrollView>
-            </View>
-            <View style={{paddingTop:30}}>
-                <View>
-                    <Text style={{marginLeft:10,marginBottom:10}}>Filmes</Text>
+                    <ScrollView horizontal={true}>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/filmes/filme1.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/filmes/filme2.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/filmes/filme3.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/filmes/filme4.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/filmes/filme5.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/filmes/filme6.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/filmes/filme7.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/filmes/filme8.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/filmes/filme9.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/filmes/filme10.jpg')}></Image>
+                        </View>
+                    </ScrollView>
                 </View>
-                <ScrollView horizontal={true}>
-                    <View style={styles.iconTemplate}>
-                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/filme1.jpg')}></Image>
+                <View style={{ paddingTop: 30 }}>
+                    <View>
+                        <Text style={{ marginLeft: 10, marginBottom: 10 }}>Séries</Text>
                     </View>
-                    <View style={styles.iconTemplate}>
-                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/filme2.jpg')}></Image>
-                    </View>
-                    <View style={styles.iconTemplate}>
-                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/filme3.jpg')}></Image>
-                    </View>
-                    <View style={styles.iconTemplate}>
-                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/filme4.jpg')}></Image>
-                    </View>
-                    <View style={styles.iconTemplate}>
-                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/filme5.jpg')}></Image>
-                    </View>
-                    <View style={styles.iconTemplate}>
-                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/filme6.jpg')}></Image>
-                    </View>
-                    <View style={styles.iconTemplate}>
-                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/filme7.jpg')}></Image>
-                    </View>
-                    <View style={styles.iconTemplate}>
-                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/filme8.jpg')}></Image>
-                    </View>
-                    <View style={styles.iconTemplate}>
-                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/filme9.jpg')}></Image>
-                    </View>
-                    <View style={styles.iconTemplate}>
-                    <Image style={{width:'100%',height:'100%',resizeMode:'stretch'}} source={require('./assets/filme10.jpg')}></Image>
-                    </View>
-                </ScrollView>
-            </View>
-            <View style={{paddingTop:30}}>
-                <View>
-                    <Text style={{marginLeft:10,marginBottom:10}}>Séries</Text>
-                </View>
-                <ScrollView horizontal={true}>
-                    <View style={styles.iconTemplate}></View>
-                    <View style={styles.iconTemplate}></View>
-                    <View style={styles.iconTemplate}></View>
-                    <View style={styles.iconTemplate}></View>
-                </ScrollView>
-            </View>
-            <View style={{paddingTop:30,paddingBottom:100}}>
-                <View>
-                    <Text style={{marginLeft:10,marginBottom:10}}>Livros</Text>
-                </View>
-                <ScrollView horizontal={true}>
-                    <View style={styles.iconTemplate}>
+                    <ScrollView horizontal={true}>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/series/ser1.jpeg')}></Image>
+                        </View>
                         
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/series/ser2.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/series/ser3.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/series/ser4.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/series/ser5.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/series/ser6.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/series/ser7.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/series/ser8.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/series/ser9.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/series/ser10.png')}></Image>
+                        </View>
+                    </ScrollView>
+                </View>
+                <View style={{ paddingTop: 30, paddingBottom: 100 }}>
+                    <View>
+                        <Text style={{ marginLeft: 10, marginBottom: 10 }}>Livros</Text>
                     </View>
-                </ScrollView>
-            </View>
+                    <ScrollView horizontal={true}>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/livros/liv1.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/livros/liv2.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/livros/liv3.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/livros/liv4.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/livros/liv5.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/livros/liv6.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/livros/liv7.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/livros/liv8.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/livros/liv9.jpg')}></Image>
+                        </View>
+                        <View style={styles.iconTemplate}>
+                            <Image style={{ width: '100%', height: '100%', resizeMode: 'stretch' }} source={require('./assets/livros/liv10.jpg')}></Image>
+                        </View>
+                    </ScrollView>
+                </View>
             </ScrollView>
             <View style={styles.bottomNav}>
                 <TouchableOpacity style={styles.btnInfo} onPress={() => props.setTela('DicasCulturais')}>
                     <Image style={styles.iconStyle} source={require('./assets/icones-18.png')}>
                     </Image>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.btnTrilha} onPress={()=>props.setTela('Trilha')}>
+                <TouchableOpacity style={styles.btnTrilha} onPress={() => props.setTela('Trilha')}>
                     <Image style={styles.iconStyleTrilha} source={require('./assets/icones-22.png')}>
                     </Image>
                 </TouchableOpacity>
@@ -195,12 +246,12 @@ const styles = StyleSheet.create({
         width: 70,
         height: 70
     },
-    iconTemplate:{
-        width:100,
-        height:150,
-        borderWidth:1,
-        marginLeft:10,
-        marginRight:10
+    iconTemplate: {
+        width: 100,
+        height: 150,
+        borderWidth: 1,
+        marginLeft: 10,
+        marginRight: 10
     }
 
 });

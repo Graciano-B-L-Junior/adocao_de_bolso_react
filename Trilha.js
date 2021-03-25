@@ -11,11 +11,11 @@ export default function Trilha(props) {
                 <StatusBar hidden></StatusBar>
                 <View style={styles.headerTela}>
                     <TouchableOpacity style={styles.btnInfo} onPress={() => props.setTela('Contato')}>
-                        <Image style={styles.iconStyle} source={require('./assets/newIcons/info.png')}>
+                        <Image style={styles.iconStyle} source={require('./assets/newIcons/infoW.png')}>
                         </Image>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.btnPerfil} onPress={() => props.setTela('Perfilusuario')}>
-                        <Image style={styles.iconStyle} source={require('./assets/icones-21.png')}>
+                        <Image style={styles.iconStyle} source={require('./assets/newIcons/perfilW.png')}>
                         </Image>
                     </TouchableOpacity>
                     <Text style={{ fontSize: 20, fontFamily: 'Inter_500Medium', color: 'white' }}><Text style={{ fontFamily: 'Inter_700Bold', color: 'white' }}>Adoção</Text> de bolso</Text>

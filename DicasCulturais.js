@@ -9,9 +9,10 @@ export default function DicasCulturais(props) {
 
     return (
         <View style={styles.container}>
+            
             <StatusBar hidden></StatusBar>
             <View style={styles.headerTela}>
-                <Text style={{ fontSize: 20, fontFamily: 'Inter_500Medium' }}>Dicas Culturais</Text>
+                <Text style={{ fontSize: 20, fontFamily: 'Inter_700Bold',color:'rgb(17,69,91)' }}>Dicas Culturais</Text>
             </View>
             <ScrollView>
                 <View style={{ paddingTop: 70 }}>
@@ -158,7 +159,7 @@ export default function DicasCulturais(props) {
             </ScrollView>
             <View style={styles.bottomNav}>
                 <TouchableOpacity style={styles.btnInfo} onPress={() => props.setTela('DicasCulturais')}>
-                    <Image style={styles.iconStyle} source={require('./assets/icones-18.png')}>
+                    <Image style={styles.iconStyle} source={require('./assets/newIcons/dicasOn.png')}>
                     </Image>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.btnTrilha} onPress={() => props.setTela('Trilha')}>
@@ -166,10 +167,11 @@ export default function DicasCulturais(props) {
                     </Image>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.btnPerfil} onPress={() => props.setTela('PerguntasFrequentes')}>
-                    <Image style={styles.iconStyle} source={require('./assets/icones-16.png')}>
+                    <Image style={styles.iconStyle} source={require('./assets/newIcons/duvidasOff.png')}>
                     </Image>
                 </TouchableOpacity>
             </View>
+            
         </View>
 
     )
@@ -184,12 +186,13 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 50,
         backgroundColor: 'white',
-        alignItems: 'center',
+        padding:10,
         justifyContent: 'center',
         position: 'absolute',
         top: 0,
         zIndex: 99,
-        borderBottomWidth: 1
+        borderBottomWidth: 3,
+        borderColor: 'rgb(247,139,13)'
     },
     inputTextStyle: {
         width: '80%',
@@ -207,22 +210,24 @@ const styles = StyleSheet.create({
     bottomNav: {
         width: '100%',
         height: 70,
-        backgroundColor: 'white',
+        backgroundColor: '#f7f7f7',
         alignItems: 'center',
         justifyContent: 'center',
         position: 'absolute',
         bottom: 0,
-        zIndex: 99,
-        borderTopWidth: 1
+        zIndex: 99
     },
     btnTrilha: {
         borderWidth: 2,
         borderRadius: 50,
-        backgroundColor: 'white',
+        backgroundColor: '#f78b0d',
         width: 90,
         height: 90,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        bottom: 20,
+        borderWidth: 4,
+        borderColor: '#f7f7f7'
     },
     btnBalaoTrilhaL: {
         height: 120,

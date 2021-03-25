@@ -129,7 +129,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         bottom: 20,
         borderWidth: 4,
-        borderColor: '#f7f7f7'
+        borderColor: '#f7f7f7',
+        elevation:5
     },
     btnBalaoTrilhaL: {
         height: 120,

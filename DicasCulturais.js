@@ -227,7 +227,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         bottom: 20,
         borderWidth: 4,
-        borderColor: '#f7f7f7'
+        borderColor: '#f7f7f7',
+        elevation:5,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.8,
+        shadowRadius: 1
     },
     btnBalaoTrilhaL: {
         height: 120,

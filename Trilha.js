@@ -2,12 +2,15 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, ScrollView, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function Trilha(props) {
 
+   
+
     return (
         <View style={styles.container}>
-            <LinearGradient colors={['rgb(255,85,0)', 'rgb(247,139,13)']} start={{ x: 0, y:0 }} end={{ x: 0, y: 0.99 }}>
+            <LinearGradient colors={['rgb(255,85,0)', 'rgb(247,139,13)']} start={{ x: 0, y: 0 }} end={{ x: 0, y: 0.99 }}>
                 <StatusBar hidden></StatusBar>
                 <View style={styles.headerTela}>
                     <TouchableOpacity style={styles.btnInfo} onPress={() => props.setTela('Contato')}>
@@ -26,37 +29,37 @@ export default function Trilha(props) {
                             <TouchableOpacity style={styles.btnBalaoTrilhaL}>
                                 <Image style={styles.iconEtapaTrilha} source={require('./assets/newIcons/trilha/etp1.png')} ></Image>
                             </TouchableOpacity>
-                            <Text style={{ right: 50, paddingTop: 10, color:'white',fontFamily:'Inter_700Bold' }}>Passo 1</Text>
+                            <Text style={{ right: 56, paddingTop: 10, color: 'white', fontFamily: 'Inter_700Bold' }}>Passo 1</Text>
                         </View>
                         <View>
                             <TouchableOpacity style={styles.btnBalaoTrilhaR}>
                                 <Image style={styles.iconEtapaTrilha} source={require('./assets/newIcons/trilha/etp2.png')} ></Image>
                             </TouchableOpacity>
-                            <Text style={{ left: 125, paddingTop: 10, color:'white',fontFamily:'Inter_700Bold' }}>Passo 2</Text>
+                            <Text style={{ left: 125, paddingTop: 10, color: 'white', fontFamily: 'Inter_700Bold' }}>Passo 2</Text>
                         </View>
                         <View>
                             <TouchableOpacity style={styles.btnBalaoTrilhaL}>
                                 <Image style={styles.iconEtapaTrilha} source={require('./assets/newIcons/trilha/etp3.png')} ></Image>
                             </TouchableOpacity>
-                            <Text style={{ right: 50, paddingTop: 10, color:'white',fontFamily:'Inter_700Bold' }}>Passo 3</Text>
+                            <Text style={{ right: 56, paddingTop: 10, color: 'white', fontFamily: 'Inter_700Bold' }}>Passo 3</Text>
                         </View>
                         <View>
                             <TouchableOpacity style={styles.btnBalaoTrilhaR}>
                                 <Image style={styles.iconEtapaTrilha} source={require('./assets/newIcons/trilha/etp4.png')} ></Image>
                             </TouchableOpacity>
-                            <Text style={{ left: 125, paddingTop: 10, color:'white',fontFamily:'Inter_700Bold' }}>Passo 4</Text>
+                            <Text style={{ left: 125, paddingTop: 10, color: 'white', fontFamily: 'Inter_700Bold' }}>Passo 4</Text>
                         </View>
                         <View>
                             <TouchableOpacity style={styles.btnBalaoTrilhaL}>
                                 <Image style={styles.iconEtapaTrilha} source={require('./assets/newIcons/trilha/etp5.png')} ></Image>
                             </TouchableOpacity>
-                            <Text style={{ right: 50, paddingTop: 10, color:'white',fontFamily:'Inter_700Bold' }}>Passo 5</Text>
+                            <Text style={{ right: 56, paddingTop: 10, color: 'white', fontFamily: 'Inter_700Bold' }}>Passo 5</Text>
                         </View>
                         <View>
                             <TouchableOpacity style={styles.btnBalaoTrilhaR}>
                                 <Image style={styles.iconEtapaTrilha} source={require('./assets/newIcons/trilha/etp6.png')} ></Image>
                             </TouchableOpacity>
-                            <Text style={{ left: 125, paddingTop: 10, color:'white',fontFamily:'Inter_700Bold' }}>Passo 6</Text>
+                            <Text style={{ left: 125, paddingTop: 10, color: 'white', fontFamily: 'Inter_700Bold' }}>Passo 6</Text>
                         </View>
                         <View style={{ paddingBottom: 100 }}></View>
                     </View>
@@ -130,7 +133,7 @@ const styles = StyleSheet.create({
         bottom: 20,
         borderWidth: 4,
         borderColor: '#f7f7f7',
-        elevation:5
+        elevation: 5
     },
     btnBalaoTrilhaL: {
         height: 120,

@@ -6,6 +6,23 @@ import CheckBox from '@react-native-community/checkbox';
 import { LinearGradient } from 'expo-linear-gradient';
 
 export default function Cadastro(props) {
+    const [idade, setIdade] = useState({
+        idade_0_1: false,
+        idade_1_3: false,
+        idade_3_5: false,
+        idade_5_10: false,
+        idade_10_15: false,
+        idade_15_18: false,
+
+    })
+    const [idade_0_1,setIdade_0_1] = useState(false)
+    const [idade_1_3,setIdade_1_3] = useState(false)
+    const [idade_3_5,setIdade_3_5] = useState(false)
+    const [idade_5_10,setIdade_5_10] = useState(false)
+    const [idade_10_15,setIdade_10_15] = useState(false)
+    const [idade_15_18,setIdade_15_18] = useState(false)
+
+    
 
     return (
         <View style={styles.container}>
@@ -19,7 +36,7 @@ export default function Cadastro(props) {
                 </View>
                 <ScrollView>
 
-                    <View style={{padding:20}}>
+                    <View style={{ padding: 20 }}>
                         <StatusBar hidden />
 
                         <View style={{ marginLeft: 20, marginTop: 100, width: '100%' }}>
@@ -28,26 +45,26 @@ export default function Cadastro(props) {
                             </View>
                             <View style={{ paddingTop: 20 }}>
                                 <Text style={{ fontFamily: 'Inter_500Medium', color: '#f7f7f7', paddingLeft: 15 }}>Nome</Text>
-                                <TextInput style={styles.inputTextStyle}></TextInput>
+                                <TextInput style={styles.inputTextStyle} onChangeText={(text) => props.setNovoUsuarioNome(text)}></TextInput>
                             </View>
                             <View style={{ paddingTop: 20 }}>
                                 <Text style={{ fontFamily: 'Inter_500Medium', color: '#f7f7f7', paddingLeft: 15 }}>Email</Text>
-                                <TextInput style={styles.inputTextStyle}></TextInput>
+                                <TextInput style={styles.inputTextStyle} onChangeText={(text) => props.setNovoUsuarioEmail(text)}></TextInput>
                             </View>
                             <View style={{ paddingTop: 20 }}>
                                 <Text style={{ fontFamily: 'Inter_500Medium', color: '#f7f7f7', paddingLeft: 15 }}>Senha</Text>
-                                <TextInput style={styles.inputTextStyle}></TextInput>
+                                <TextInput style={styles.inputTextStyle} secureTextEntry={true} onChangeText={(text) => props.setNovoUsuarioSenha(text)}></TextInput>
                             </View>
 
                             <Text style={{ paddingTop: 50, fontFamily: 'Inter_500Medium', paddingLeft: 55, color: '#f7f7f7' }}>Informações pessoais</Text>
 
                             <View style={{ paddingTop: 20 }}>
-                                <Text style={{ fontFamily: 'Inter_500Medium', paddingLeft: 15, color: '#f7f7f7' }}>idade</Text>
-                                <TextInput style={styles.inputTextStyle}></TextInput>
+                                <Text style={{ fontFamily: 'Inter_500Medium', paddingLeft: 15, color: '#f7f7f7' }} >idade</Text>
+                                <TextInput style={styles.inputTextStyle} numeric keyboardType={'numeric'} onChangeText={(text) => props.setNovoUsuarioIdade(text)} ></TextInput>
                             </View>
                             <View style={{ paddingTop: 20 }}>
                                 <Text style={{ fontFamily: 'Inter_500Medium', paddingLeft: 15, color: '#f7f7f7' }}>Estado civil</Text>
-                                <TextInput style={styles.inputTextStyle}></TextInput>
+                                <TextInput style={styles.inputTextStyle} onChangeText={(text) => props.setNovoUsuarioEstadoCivil(text)}></TextInput>
                             </View>
 
                             <Text style={{ paddingTop: 50, fontFamily: 'Inter_500Medium', paddingLeft: 75, color: '#f7f7f7' }}>Perfil da criança</Text>
@@ -67,37 +84,85 @@ export default function Cadastro(props) {
                             <View style={{ paddingTop: 15, paddingLeft: 15 }}>
                                 <View style={{ flexDirection: 'row' }}>
                                     <View style={{ flexDirection: 'row', width: '40%' }}>
-                                        <CheckBox>
-                                        </CheckBox>
+                                        {
+                                            idade_0_1 ?
+                                                <TouchableOpacity style={styles.checkBox} onPress={() => setIdade_0_1(false)}>
+                                                    <Text style={{ textAlign: 'center', color: '#f7f7f7', fontFamily: 'Inter_700Bold', fontSize: 20 }}>X</Text>
+                                                </TouchableOpacity>
+                                                :
+                                                <TouchableOpacity style={styles.checkBox} onPress={() => setIdade_0_1(true)}>
+                                                    <Text style={{ textAlign: 'center', color: '#f7f7f7', fontFamily: 'Inter_700Bold', fontSize: 20 }}></Text>
+                                                </TouchableOpacity>
+                                        }
                                         <Text style={{ color: '#f7f7f7', paddingTop: 7 }}>0~1 ano</Text>
                                     </View>
                                     <View style={{ flexDirection: 'row', width: '40%' }}>
-                                        <CheckBox>
-                                        </CheckBox>
+                                        {
+                                            idade_1_3 ?
+                                                <TouchableOpacity style={styles.checkBox} onPress={() => setIdade_1_3(false)}>
+                                                    <Text style={{ textAlign: 'center', color: '#f7f7f7', fontFamily: 'Inter_700Bold', fontSize: 20 }}>X</Text>
+                                                </TouchableOpacity>
+                                                :
+                                                <TouchableOpacity style={styles.checkBox} onPress={() => setIdade_1_3(true)}>
+
+                                                </TouchableOpacity>
+                                        }
                                         <Text style={{ color: '#f7f7f7', paddingTop: 7 }}>1~3 anos</Text>
                                     </View>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <View style={{ flexDirection: 'row', width: '40%' }}>
-                                        <CheckBox>
-                                        </CheckBox>
+                                        {
+                                            idade_3_5  ?
+                                                <TouchableOpacity style={styles.checkBox} onPress={() => setIdade_3_5(false)}>
+                                                    <Text style={{ textAlign: 'center', color: '#f7f7f7', fontFamily: 'Inter_700Bold', fontSize: 20 }}>X</Text>
+                                                </TouchableOpacity>
+                                                :
+                                                <TouchableOpacity style={styles.checkBox} onPress={() => setIdade_3_5(true)}>
+                                                    
+                                                </TouchableOpacity>
+                                        }
                                         <Text style={{ paddingTop: 7, fontFamily: 'Inter_500Medium', color: '#f7f7f7' }}>3~5 anos</Text>
                                     </View>
                                     <View style={{ flexDirection: 'row', width: '40%' }}>
-                                        <CheckBox>
-                                        </CheckBox>
+                                        {
+                                            idade_5_10 ?
+                                                <TouchableOpacity style={styles.checkBox} onPress={() => setIdade_5_10(false)}>
+                                                    <Text style={{ textAlign: 'center', color: '#f7f7f7', fontFamily: 'Inter_700Bold', fontSize: 20 }}>X</Text>
+                                                </TouchableOpacity>
+                                                :
+                                                <TouchableOpacity style={styles.checkBox} onPress={() => setIdade_5_10(true)}>
+                                                    
+                                                </TouchableOpacity>
+                                        }
                                         <Text style={{ paddingTop: 7, fontFamily: 'Inter_500Medium', color: '#f7f7f7' }}>5~10 anos</Text>
                                     </View>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <View style={{ flexDirection: 'row', width: '40%' }}>
-                                        <CheckBox>
-                                        </CheckBox>
+                                        {
+                                            idade_10_15 ?
+                                                <TouchableOpacity style={styles.checkBox} onPress={() => setIdade_10_15(false)}>
+                                                    <Text style={{ textAlign: 'center', color: '#f7f7f7', fontFamily: 'Inter_700Bold', fontSize: 20 }}>X</Text>
+                                                </TouchableOpacity>
+                                                :
+                                                <TouchableOpacity style={styles.checkBox} onPress={() => setIdade_10_15(true)}>
+                                                    
+                                                </TouchableOpacity>
+                                        }
                                         <Text style={{ paddingTop: 7, fontFamily: 'Inter_500Medium', color: '#f7f7f7' }}>10~15 anos</Text>
                                     </View>
                                     <View style={{ flexDirection: 'row', width: '40%' }}>
-                                        <CheckBox>
-                                        </CheckBox>
+                                        {
+                                            idade_15_18 ?
+                                                <TouchableOpacity style={styles.checkBox} onPress={() => setIdade_15_18(false)}>
+                                                    <Text style={{ textAlign: 'center', color: '#f7f7f7', fontFamily: 'Inter_700Bold', fontSize: 20 }}>X</Text>
+                                                </TouchableOpacity>
+                                                :
+                                                <TouchableOpacity style={styles.checkBox} onPress={() => setIdade_15_18(true)}>
+                                                    
+                                                </TouchableOpacity>
+                                        }
                                         <Text style={{ paddingTop: 7, fontFamily: 'Inter_500Medium', color: '#f7f7f7' }}>15~18 anos</Text>
                                     </View>
                                 </View>
@@ -135,14 +200,27 @@ const styles = StyleSheet.create({
 
     },
     inputTextStyle: {
-        width: '80%',
-        height: 50,
+        width: '90%',
+        height: 40,
         borderWidth: 1,
-        borderRadius: 50
+        borderRadius: 50,
+        paddingLeft: 20,
+        color: '#f7f7f7',
+        borderColor: '#f7f7f7'
     },
     btnVoltar: {
         position: 'absolute',
         left: 20
+    },
+    checkBox: {
+        width: 20,
+        height: 20,
+        borderWidth: 1,
+        top: 7,
+        borderColor: '#f7f7f7',
+        justifyContent: 'center',
+        marginRight: 10
+
     }
 
 });

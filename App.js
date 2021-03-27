@@ -110,7 +110,7 @@ export default function App() {
                     width: 290, height: 40, borderWidth: 1, marginTop: 15, paddingLeft: 5, borderRadius: 25,
                     borderColor: '#f7f7f7', color: '#f7f7f7', textAlign: 'center'
                   }}></TextInput>
-                <TextInput placeholder="senha" placeholderTextColor="#f7f7f7" onChangeText={text => setSenha(text)}
+                <TextInput placeholder="senha" placeholderTextColor="#f7f7f7" onChangeText={text => setSenha(text)} secureTextEntry={true}
                   style={{ width: 290, height: 40, borderWidth: 1, marginTop: 15, paddingLeft: 5, borderRadius: 25, borderColor: '#f7f7f7', color: '#f7f7f7', textAlign: 'center' }}></TextInput>
                 <View style={{ width: 100, paddingTop: 25 }}>
                   <TouchableOpacity style={{ width: '100%', backgroundColor: 'rgb(247,139,13)', height: 30, borderRadius: 25 }} onPress={() => Logar(usuario, senha)}>

@@ -65,18 +65,18 @@ export default function App() {
       estadoCivil: '',
       perfilCrianca: {
         sexo: '',
-        idade: ''
+        idade: []
       }
     }
   )
 
-  const [novoUsuarioNome, setNovoUsuarioNome] = useState()
-  const [novoUsuarioEmail, setNovoUsuarioEmail] = useState()
-  const [novoUsuarioSenha, setNovoUsuarioSenha] = useState()
-  const [novoUsuarioIdade, setNovoUsuarioIdade] = useState()
-  const [novoUsuarioEstadoCivil, setNovoUsuarioEstadoCivil] = useState()
-  const [novoUsuarioPefilCriancaSexo, setNovoUsuarioPefilCriancaSexo] = useState()
-  const [novoUsuarioPefilCriancaIdade, setNovoUsuarioPefilCriancaIdade] = useState()
+  const [novoUsuarioNome, setNovoUsuarioNome] = useState('')
+  const [novoUsuarioEmail, setNovoUsuarioEmail] = useState('')
+  const [novoUsuarioSenha, setNovoUsuarioSenha] = useState('')
+  const [novoUsuarioIdade, setNovoUsuarioIdade] = useState('')
+  const [novoUsuarioEstadoCivil, setNovoUsuarioEstadoCivil] = useState('')
+  const [novoUsuarioPefilCriancaSexo, setNovoUsuarioPefilCriancaSexo] = useState('')
+  const [novoUsuarioPefilCriancaIdade, setNovoUsuarioPefilCriancaIdade] = useState('')
 
 
 

@@ -48,7 +48,14 @@ export default function App() {
       estadoCivil: 'Solteiro',
       perfilCrianca: {
         sexo: 'Masculino',
-        idade: '0~1'
+        idade: {
+          idade_0_1: false,
+          idade_1_3: false,
+          idade_3_5: false,
+          idade_5_10: false,
+          idade_10_15: false,
+          idade_15_18: false
+        }
       }
     }])
   //hooks para validar as entradas de login
@@ -65,7 +72,14 @@ export default function App() {
       estadoCivil: '',
       perfilCrianca: {
         sexo: '',
-        idade: []
+        idade: {
+          idade_0_1: false,
+          idade_1_3: false,
+          idade_3_5: false,
+          idade_5_10: false,
+          idade_10_15: false,
+          idade_15_18: false
+        }
       }
     }
   )
@@ -82,14 +96,20 @@ export default function App() {
 
   function Logar(usuario, senha) {
     const allUsers = usuarios;
+    let troca = false
     allUsers.forEach((user) => {
       if (user.email == usuario && user.senha == senha) {
-        Alert.alert("Usuário logado com sucesso")
-        setTela('Trilha')
-        return
+        troca = true
       }
-      Alert.alert("Usuário ou senha incorretos")
     })
+
+    if (troca) {
+      Alert.alert("Usuário logado com sucesso")
+      setTela('Trilha')
+    } else {
+      Alert.alert("Usuário ou senha incorretos")
+    }
+
   }
   if (!fontsLoaded) {
     return (<AppLoading></AppLoading>)
@@ -142,6 +162,7 @@ export default function App() {
           novoUsuarioPefilCriancaSexo={novoUsuarioPefilCriancaSexo} setNovoUsuarioPefilCriancaSexo={setNovoUsuarioPefilCriancaSexo}
           novoUsuarioPefilCriancaIdade={novoUsuarioPefilCriancaIdade} setNovoUsuarioPefilCriancaIdade={setNovoUsuarioPefilCriancaIdade}
           novoUsuario={novoUsuario} setNovoUsuario={setNovoUsuario}
+          usuarios={usuarios} setUsuarios={setUsuarios}
         ></Cadastro>
       )
     }

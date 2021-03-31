@@ -28,7 +28,6 @@ export default function Cadastro(props) {
     const [sexoCrianca, setSexoCrianca] = useState()
 
     function validarCadastro() {
-
         //console.warn(typeof props.novoUsuarioNome)
         //console.warn(typeof props.novoUsuarioEmail)
         //console.warn(typeof props.novoUsuarioSenha)
@@ -36,39 +35,87 @@ export default function Cadastro(props) {
         //console.warn(typeof props.novoUsuarioEstadoCivil)
         //console.warn(typeof props.novoUsuarioPefilCriancaSexo)
 
-        if(props.novoUsuarioNome == ''){
+        if (props.novoUsuarioNome == '') {
             Alert.alert('Preencha o campo Nome')
             return
         }
-        if(props.novoUsuarioEmail == ''){
+        if (props.novoUsuarioEmail == '') {
             Alert.alert('Preencha o campo Email')
             return
         }
-        if(props.novoUsuarioSenha == ''){
+        if (props.novoUsuarioSenha == '') {
             Alert.alert('Preencha o campo Senha')
             return
         }
-        if(props.novoUsuarioIdade == ''){
+        if (props.novoUsuarioIdade == '') {
             Alert.alert('Preencha o campo Idade')
             return
         }
-        if(props.novoUsuarioEstadoCivil == ''){
+        if (props.novoUsuarioEstadoCivil == '') {
             Alert.alert('Preencha o campo Estado civil')
             return
         }
-        if(props.novoUsuarioPefilCriancaSexo == ''){
+        if (props.novoUsuarioPefilCriancaSexo == '') {
             Alert.alert('Preencha o campo Perfil da criança')
             return
         }
-        if(props.novoUsuarioPefilCriancaIdade == ''){
-            Alert.alert('Preencha o campo idade em Perfil da criança')
+
+
+        if (idade_0_1 == false && idade_3_5 == false && idade_5_10 == false && idade_10_15 == false && idade_15_18 == false) {
+            Alert.alert('Preencha o campo de idade da criança')
             return
         }
 
+        let Nome = props.novoUsuarioNome
+        let Email = props.novoUsuarioEmail
+        let Senha = props.novoUsuarioSenha
+        let Idade = props.novoUsuarioIdade
+        let estadoCivil = props.novoUsuarioEstadoCivil
+        let Sexo = props.novoUsuarioPefilCriancaSexo
+        let idade01 = idade_0_1
+        let idade13 = idade_1_3
+        let idade35 = idade_3_5
+        let idade510 = idade_5_10
+        let idade1015 = idade_10_15
+        let idade1518 = idade_15_18
+        const novoUser = {
+            nome: Nome,
+            email: Email,
+            senha: Senha,
+            idade: Idade,
+            estadoCivil: estadoCivil,
+            perfilCrianca: {
+                sexo: Sexo,
+                idade: {
+                    idade_0_1: idade01,
+                    idade_1_3: idade13,
+                    idade_3_5: idade35,
+                    idade_5_10: idade510,
+                    idade_10_15: idade1015,
+                    idade_15_18: idade1518
+                }
+            }
+        }
+        props.setNovoUsuario(novoUser)
+        //console.warn(props.novoUsuario)
+        const allUsers = props.usuarios;
+        allUsers.push(novoUser)
+        props.setUsuarios(allUsers)
+        props.setNovoUsuarioNome('')
+        props.setNovoUsuarioEmail('')
+        props.setNovoUsuarioSenha('')
+        props.setNovoUsuarioIdade('')
+        props.setNovoUsuarioEstadoCivil('')
+        props.setNovoUsuarioPefilCriancaSexo('')
+        props.setNovoUsuario({})
 
 
-        
+
+        Alert.alert('usuario cadastrado com sucesso')
+        props.setTela('inicio')
+
     }
+
 
     return (
         <View style={styles.container}>

@@ -4,8 +4,20 @@ import { StyleSheet, Text, View, Button, TouchableOpacity, TextInput, ScrollView
 import { AntDesign } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Picker } from '@react-native-picker/picker';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+
+
 
 export default function Cadastro(props) {
+    const setAllUsuarios = async (value) => {
+        try {
+            const result = JSON.stringify(value)
+            await AsyncStorage.setItem('usuarios', result)
+        } catch (e) {
+            console.warn(e)
+        }
+    }
     /*
     const [idades, setIdades] = useState({
         idade_0_1: false,
@@ -34,7 +46,6 @@ export default function Cadastro(props) {
         //console.warn(typeof props.novoUsuarioIdade)
         //console.warn(typeof props.novoUsuarioEstadoCivil)
         //console.warn(typeof props.novoUsuarioPefilCriancaSexo)
-
         if (props.novoUsuarioNome == '') {
             Alert.alert('Preencha o campo Nome')
             return
@@ -59,13 +70,10 @@ export default function Cadastro(props) {
             Alert.alert('Preencha o campo Perfil da criança')
             return
         }
-
-
         if (idade_0_1 == false && idade_3_5 == false && idade_5_10 == false && idade_10_15 == false && idade_15_18 == false) {
             Alert.alert('Preencha o campo de idade da criança')
             return
         }
-
         let Nome = props.novoUsuarioNome
         let Email = props.novoUsuarioEmail
         let Senha = props.novoUsuarioSenha
@@ -101,6 +109,7 @@ export default function Cadastro(props) {
         const allUsers = props.usuarios;
         allUsers.push(novoUser)
         props.setUsuarios(allUsers)
+        setAllUsuarios(allUsers)
         props.setNovoUsuarioNome('')
         props.setNovoUsuarioEmail('')
         props.setNovoUsuarioSenha('')
@@ -108,12 +117,8 @@ export default function Cadastro(props) {
         props.setNovoUsuarioEstadoCivil('')
         props.setNovoUsuarioPefilCriancaSexo('')
         props.setNovoUsuario({})
-
-
-
         Alert.alert('usuario cadastrado com sucesso')
         props.setTela('inicio')
-
     }
 
 

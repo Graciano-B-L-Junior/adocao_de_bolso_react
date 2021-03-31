@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Image, Text, View, TouchableOpacity, TextInput, Alert } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import Cadastro from './Cadastro';
@@ -7,6 +7,7 @@ import Contato from './Contato';
 import Trilha from './Trilha';
 import MensagemEnviada from './MensagemEnviada';
 import AppLoading from 'expo-app-loading';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
   useFonts,
   Inter_100Thin,
@@ -24,8 +25,23 @@ import Perfilusuario from './Perfilusuario';
 import DicasCulturais from './DicasCulturais';
 import PerguntasFrequentes from './PerguntasFrequentes';
 
+
+
+
 export default function App() {
 
+  
+  //função que pega todos os usuários
+  const getUsuarios = async () => {
+    try {
+      const value = await AsyncStorage.getItem('usuarios')
+      
+      const result = JSON.parse(value);
+      setUsuarios(result)  
+    } catch (e) {
+      //console.warn(e)
+    }
+  }
   let [fontsLoaded] = useFonts({
     Inter_100Thin,
     Inter_200ExtraLight,
@@ -102,7 +118,6 @@ export default function App() {
         troca = true
       }
     })
-
     if (troca) {
       Alert.alert("Usuário logado com sucesso")
       setTela('Trilha')
@@ -111,6 +126,10 @@ export default function App() {
     }
 
   }
+  useEffect(() => {
+    getUsuarios();
+
+  },[])
   if (!fontsLoaded) {
     return (<AppLoading></AppLoading>)
   } else {

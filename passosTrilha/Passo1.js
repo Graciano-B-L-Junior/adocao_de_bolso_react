@@ -188,7 +188,7 @@ const styles = StyleSheet.create({
         borderRadius: 15
     },
     btnmodalDisplay: {
-        width: 80,
+        padding:15,
         height: 30,
         backgroundColor: 'rgb(247,139,13)',
         borderRadius: 50,

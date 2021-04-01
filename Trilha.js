@@ -26,7 +26,7 @@ export default function Trilha(props) {
                 <ScrollView>
                     <View style={{ paddingTop: 100, justifyContent: 'center', alignItems: 'center' }}>
                         <View>
-                            <TouchableOpacity style={styles.btnBalaoTrilhaL}>
+                            <TouchableOpacity style={styles.btnBalaoTrilhaL} onPress={()=>props.setTela('Passo1')}>
                                 <Image style={styles.iconEtapaTrilha} source={require('./assets/newIcons/trilha/etp1.png')} ></Image>
                             </TouchableOpacity>
                             <Text style={{ right: 56, paddingTop: 10, color: 'white', fontFamily: 'Inter_700Bold' }}>Passo 1</Text>

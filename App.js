@@ -24,6 +24,8 @@ import NovaSenha from './NovaSenha';
 import Perfilusuario from './Perfilusuario';
 import DicasCulturais from './DicasCulturais';
 import PerguntasFrequentes from './PerguntasFrequentes';
+import passo1 from './passosTrilha/Passo1';
+import Passo1 from './passosTrilha/Passo1';
 
 
 
@@ -128,7 +130,6 @@ export default function App() {
   }
   useEffect(() => {
     getUsuarios();
-
   },[])
   if (!fontsLoaded) {
     return (<AppLoading></AppLoading>)
@@ -188,6 +189,10 @@ export default function App() {
     else if (tela == 'Trilha') {
       return (
         <Trilha tela={tela} setTela={setTela}></Trilha>
+      )
+    }else if(tela == 'Passo1'){
+      return(
+        <Passo1 tela={tela} setTela={setTela}></Passo1>
       )
     }
     else if (tela == 'Contato') {

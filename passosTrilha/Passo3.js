@@ -198,6 +198,9 @@ export default function Passo3(props) {
                         <View style={styles.modalDisplay3}>
                             <View style={{ alignItems: 'center', justifyContent: 'center', padding: 25 }}>
                                 <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingBottom: 10 }}>
+                                Após análise e aprovação da documentação, os pretendentes são convocados pelo Setor de Cadastro para participarem do curso preparatório. Em Fortaleza, esta etapa é feita através de uma parceria entre o TJCE e os Grupos de Apoio à Adoção de Fortaleza e realizada em dois dias distintos.
+                                    </Text>
+                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingBottom: 10 }}>
                                     O curso é dividido em 2 módulos, sendo um dia para cada:
                                     </Text>
                                 <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify' }}>
@@ -207,7 +210,7 @@ export default function Passo3(props) {
                                     •	Aspectos psicossociais da adoção
                                     </Text>
                                 <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify' }}>
-                                    •	Para saber mais sobre o curso sobre o passo 4
+                                    •	Para saber mais sobre o curso vá para o passo 4
                                     </Text>
                                 <TouchableOpacity style={styles.btnmodalDisplay} onPress={() => props.setTela('Trilha')}>
                                     <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold' }}>Voltar a trilha</Text>

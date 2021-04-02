@@ -44,7 +44,7 @@ export default function Trilha(props) {
                             <Text style={{ right: 56, paddingTop: 10, color: 'white', fontFamily: 'Inter_700Bold' }}>Passo 3</Text>
                         </View>
                         <View>
-                            <TouchableOpacity style={styles.btnBalaoTrilhaR}>
+                            <TouchableOpacity style={styles.btnBalaoTrilhaR} onPress={()=>props.setTela('Passo4')}>
                                 <Image style={styles.iconEtapaTrilha} source={require('./assets/newIcons/trilha/etp4.png')} ></Image>
                             </TouchableOpacity>
                             <Text style={{ left: 125, paddingTop: 10, color: 'white', fontFamily: 'Inter_700Bold' }}>Passo 4</Text>

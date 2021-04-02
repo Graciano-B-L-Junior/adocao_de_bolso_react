@@ -27,6 +27,7 @@ import PerguntasFrequentes from './PerguntasFrequentes';
 import Passo1 from './passosTrilha/Passo1';
 import Passo2 from './passosTrilha/Passo2';
 import Passo3 from './passosTrilha/Passo3';
+import Passo4 from './passosTrilha/Passo4';
 
 
 
@@ -204,6 +205,11 @@ export default function App() {
     else if(tela == 'Passo3'){
       return(
         <Passo3 tela={tela} setTela={setTela}></Passo3>
+      )
+    }
+    else if(tela == 'Passo4'){
+      return(
+        <Passo4 tela={tela} setTela={setTela}></Passo4>
       )
     }
     else if (tela == 'Contato') {

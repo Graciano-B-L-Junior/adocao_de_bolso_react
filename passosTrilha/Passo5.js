@@ -1,9 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, ScrollView} from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, ScrollView } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
-export default function Passo4(props) {
+export default function Passo5(props) {
     const [semMensagem, setSemMensagem] = useState(true)
     const [SimNao, setSimNao] = useState(0)
 
@@ -20,30 +20,24 @@ export default function Passo4(props) {
                 <ScrollView>
                     <View style={{ paddingTop: 70, justifyContent: 'center', alignItems: 'center' }}>
                         <View>
-                            <Text style={{ color: 'rgb(247,139,13)', fontFamily: 'Inter_700Bold' }}>Passo 4</Text>
+                            <Text style={{ color: 'rgb(247,139,13)', fontFamily: 'Inter_700Bold' }}>Passo 5</Text>
                         </View>
                         <View style={styles.modalDisplay3}>
                             <View style={{ justifyContent: 'center', padding: 15 }}>
                                 <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify' }}>
-                                    Após participação no curso, os pretendentes são entrevistados por uma equipe técnica da Vara da Infância e da Juventude, formada por psicólogos e assistentes sociais.
+                                    Após participação no curso e avaliação da equipe técnica, o pretendente passa a integrar o cadastro de habilitados.
                                     </Text>
                                 <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
-                                    Objetivos:
+                                    OBS: em Fortaleza, o Setor de Cadastro pede que os pretendentes frequentem os encontros dos Grupos de Apoio à Adoção e apresentem declaração de participação em, pelo menos, quatro encontros.
+                                    </Text>
+                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
+                                    A Acalanto Fortaleza fornece certificado de participação nos encontros do Bate-Papo Adotivo, que são realizados mensalmente.
+                                    </Text>
+                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
+                                    Mais informações através do telefone <Text style={{ color: 'rgb(247,139,13)' }}> (85) 98854.6476 (WhatsApp)</Text>
                                 </Text>
                                 <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
-                                    • Conhecer as motivações e expectativas dos candidatos à adoção;
-                                </Text>
-                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
-                                    •	Analisar a realidade sociofamiliar;
-                                </Text>
-                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
-                                    •	Avaliar, por meio de uma criteriosa análise, se o postulante à adoção pode vir a receber criança/adolescente na condição de filho;
-                                </Text>
-                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
-                                    •	Identificar qual lugar ela ocupará na dinâmica familiar, bem como orientar os postulantes sobre o processo adotivo.
-                                </Text>
-                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
-                                    A entrevista ja foi realizada?
+                                    Já possui 4 documentos de declaração dos encontros com os Grupos de adoção?
                                 </Text>
                             </View>
                         </View>
@@ -76,39 +70,33 @@ export default function Passo4(props) {
                 <ScrollView>
                     <View style={{ paddingTop: 70, justifyContent: 'center', alignItems: 'center' }}>
                         <View>
-                            <Text style={{ color: 'rgb(247,139,13)', fontFamily: 'Inter_700Bold' }}>Passo 4</Text>
+                            <Text style={{ color: 'rgb(247,139,13)', fontFamily: 'Inter_700Bold' }}>Passo 5</Text>
                         </View>
                         <View style={styles.modalDisplay3}>
                             <View style={{ justifyContent: 'center', padding: 15 }}>
                                 <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify' }}>
-                                    Após participação no curso, os pretendentes são entrevistados por uma equipe técnica da Vara da Infância e da Juventude, formada por psicólogos e assistentes sociais.
+                                    Após participação no curso e avaliação da equipe técnica, o pretendente passa a integrar o cadastro de habilitados.
                                     </Text>
                                 <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
-                                    Objetivos:
+                                    OBS: em Fortaleza, o Setor de Cadastro pede que os pretendentes frequentem os encontros dos Grupos de Apoio à Adoção e apresentem declaração de participação em, pelo menos, quatro encontros.
+                                    </Text>
+                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
+                                    A Acalanto Fortaleza fornece certificado de participação nos encontros do Bate-Papo Adotivo, que são realizados mensalmente.
+                                    </Text>
+                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
+                                    Mais informações através do telefone <Text style={{ color: 'rgb(247,139,13)' }}> (85) 98854.6476 (WhatsApp)</Text>
                                 </Text>
                                 <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
-                                    • Conhecer as motivações e expectativas dos candidatos à adoção;
-                                </Text>
-                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
-                                    •	Analisar a realidade sociofamiliar;
-                                </Text>
-                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
-                                    •	Avaliar, por meio de uma criteriosa análise, se o postulante à adoção pode vir a receber criança/adolescente na condição de filho;
-                                </Text>
-                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
-                                    •	Identificar qual lugar ela ocupará na dinâmica familiar, bem como orientar os postulantes sobre o processo adotivo.
-                                </Text>
-                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
-                                    A entrevista ja foi realizada?
+                                    Já possui 4 documentos de declaração dos encontros com os Grupos de adoção?
                                 </Text>
                             </View>
                         </View>
                         <View style={styles.modalDisplay}>
                             <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
-                                <TouchableOpacity style={styles.btnmodalDisplay} >
+                                <TouchableOpacity style={styles.btnmodalDisplay}>
                                     <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold' }}>Sim</Text>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={styles.btnmodalDisplay} >
+                                <TouchableOpacity style={styles.btnmodalDisplay}>
                                     <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold' }}>Não</Text>
                                 </TouchableOpacity>
                             </View>
@@ -116,11 +104,10 @@ export default function Passo4(props) {
                         <View style={styles.modalDisplay3}>
                             <View style={{ justifyContent: 'center', padding: 15 }}>
                                 <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify' }}>
-                                    Parabens! a partir desse momento você passa a integrar o cadastro de habilitados.
-                                    Agora volte para trilha e acesse o passo 5
-                                    </Text>
-                                <TouchableOpacity style={styles.btnmodalDisplay} onPress={() => props.setTela('Trilha')} >
-                                    <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold' }}>Voltar para Trilha</Text>
+                                    Que ótimo! Apresente os documentos ao setor de cadastro e passe para o passo 6  
+                                </Text>
+                                <TouchableOpacity style={styles.btnmodalDisplay} onPress={()=>props.setTela('Trilha')}>
+                                    <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold' }}>Voltar para trilha</Text>
                                 </TouchableOpacity>
                             </View>
                         </View>
@@ -131,7 +118,7 @@ export default function Passo4(props) {
         )
     }
     else if (SimNao == 'não') {
-        return (
+        return(
             <View style={styles.container}>
                 <StatusBar hidden></StatusBar>
                 <View style={styles.headerTela}>
@@ -143,30 +130,24 @@ export default function Passo4(props) {
                 <ScrollView>
                     <View style={{ paddingTop: 70, justifyContent: 'center', alignItems: 'center' }}>
                         <View>
-                            <Text style={{ color: 'rgb(247,139,13)', fontFamily: 'Inter_700Bold' }}>Passo 4</Text>
+                            <Text style={{ color: 'rgb(247,139,13)', fontFamily: 'Inter_700Bold' }}>Passo 5</Text>
                         </View>
                         <View style={styles.modalDisplay3}>
                             <View style={{ justifyContent: 'center', padding: 15 }}>
                                 <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify' }}>
-                                    Após participação no curso, os pretendentes são entrevistados por uma equipe técnica da Vara da Infância e da Juventude, formada por psicólogos e assistentes sociais.
+                                    Após participação no curso e avaliação da equipe técnica, o pretendente passa a integrar o cadastro de habilitados.
                                     </Text>
                                 <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
-                                    Objetivos:
+                                    OBS: em Fortaleza, o Setor de Cadastro pede que os pretendentes frequentem os encontros dos Grupos de Apoio à Adoção e apresentem declaração de participação em, pelo menos, quatro encontros.
+                                    </Text>
+                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
+                                    A Acalanto Fortaleza fornece certificado de participação nos encontros do Bate-Papo Adotivo, que são realizados mensalmente.
+                                    </Text>
+                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
+                                    Mais informações através do telefone <Text style={{ color: 'rgb(247,139,13)' }}> (85) 98854.6476 (WhatsApp)</Text>
                                 </Text>
                                 <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
-                                    • Conhecer as motivações e expectativas dos candidatos à adoção;
-                                </Text>
-                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
-                                    •	Analisar a realidade sociofamiliar;
-                                </Text>
-                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
-                                    •	Avaliar, por meio de uma criteriosa análise, se o postulante à adoção pode vir a receber criança/adolescente na condição de filho;
-                                </Text>
-                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
-                                    •	Identificar qual lugar ela ocupará na dinâmica familiar, bem como orientar os postulantes sobre o processo adotivo.
-                                </Text>
-                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
-                                    A entrevista ja foi realizada?
+                                    Já possui 4 documentos de declaração dos encontros com os Grupos de adoção?
                                 </Text>
                             </View>
                         </View>
@@ -183,8 +164,14 @@ export default function Passo4(props) {
                         <View style={styles.modalDisplay3}>
                             <View style={{ justifyContent: 'center', padding: 15 }}>
                                 <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify' }}>
-                                    Aguarde a entrevista e depois volte ao passo 4 da trilha
+                                    Entre em contato com a Acalanto para participar dos encontros e conseguir os 4 documentos de participação dos encontros, e após isso volte ao passo 5
                                 </Text>
+                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', paddingTop: 10 }}>
+                                    Mais informações sobre a Acalanto através do telefone <Text style={{ color: 'rgb(247,139,13)' }}> (85) 98854.6476 (WhatsApp)</Text>
+                                </Text>
+                                <TouchableOpacity style={styles.btnmodalDisplay} onPress={()=>props.setTela('Trilha')}>
+                                    <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold' }}>Voltar para trilha</Text>
+                                </TouchableOpacity>
                             </View>
                         </View>
                         <View style={{ paddingBottom: 20 }}></View>

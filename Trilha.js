@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, ScrollView, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 export default function Trilha(props) {
 
@@ -50,7 +50,7 @@ export default function Trilha(props) {
                             <Text style={{ left: 125, paddingTop: 10, color: 'white', fontFamily: 'Inter_700Bold' }}>Passo 4</Text>
                         </View>
                         <View>
-                            <TouchableOpacity style={styles.btnBalaoTrilhaL}>
+                            <TouchableOpacity style={styles.btnBalaoTrilhaL} onPress={()=>props.setTela('Passo5')}>
                                 <Image style={styles.iconEtapaTrilha} source={require('./assets/newIcons/trilha/etp5.png')} ></Image>
                             </TouchableOpacity>
                             <Text style={{ right: 56, paddingTop: 10, color: 'white', fontFamily: 'Inter_700Bold' }}>Passo 5</Text>

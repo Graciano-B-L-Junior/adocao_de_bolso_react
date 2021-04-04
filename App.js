@@ -29,6 +29,7 @@ import Passo2 from './passosTrilha/Passo2';
 import Passo3 from './passosTrilha/Passo3';
 import Passo4 from './passosTrilha/Passo4';
 import Passo5 from './passosTrilha/Passo5';
+import Passo6 from './passosTrilha/Passo6';
 
 
 
@@ -216,6 +217,11 @@ export default function App() {
     else if(tela == 'Passo5'){
       return(
         <Passo5 tela={tela} setTela={setTela}></Passo5>
+      )
+    }
+    else if(tela == 'Passo6'){
+      return(
+        <Passo6 tela={tela} setTela={setTela}></Passo6>
       )
     }
     else if (tela == 'Contato') {

@@ -6,7 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 export default function Trilha(props) {
 
-   
+
 
     return (
         <View style={styles.container}>
@@ -26,37 +26,37 @@ export default function Trilha(props) {
                 <ScrollView>
                     <View style={{ paddingTop: 100, justifyContent: 'center', alignItems: 'center' }}>
                         <View>
-                            <TouchableOpacity style={styles.btnBalaoTrilhaL} onPress={()=>props.setTela('Passo1')}>
+                            <TouchableOpacity style={styles.btnBalaoTrilhaL} onPress={() => props.setTela('Passo1')}>
                                 <Image style={styles.iconEtapaTrilha} source={require('./assets/newIcons/trilha/etp1.png')} ></Image>
                             </TouchableOpacity>
                             <Text style={{ right: 56, paddingTop: 10, color: 'white', fontFamily: 'Inter_700Bold' }}>Passo 1</Text>
                         </View>
                         <View>
-                            <TouchableOpacity style={styles.btnBalaoTrilhaR}  onPress={()=>props.setTela('Passo2')}>
+                            <TouchableOpacity style={styles.btnBalaoTrilhaR} onPress={() => props.setTela('Passo2')}>
                                 <Image style={styles.iconEtapaTrilha} source={require('./assets/newIcons/trilha/etp2.png')} ></Image>
                             </TouchableOpacity>
                             <Text style={{ left: 125, paddingTop: 10, color: 'white', fontFamily: 'Inter_700Bold' }}>Passo 2</Text>
                         </View>
                         <View>
-                            <TouchableOpacity style={styles.btnBalaoTrilhaL} onPress={()=>props.setTela('Passo3')}>
+                            <TouchableOpacity style={styles.btnBalaoTrilhaL} onPress={() => props.setTela('Passo3')}>
                                 <Image style={styles.iconEtapaTrilha} source={require('./assets/newIcons/trilha/etp3.png')} ></Image>
                             </TouchableOpacity>
                             <Text style={{ right: 56, paddingTop: 10, color: 'white', fontFamily: 'Inter_700Bold' }}>Passo 3</Text>
                         </View>
                         <View>
-                            <TouchableOpacity style={styles.btnBalaoTrilhaR} onPress={()=>props.setTela('Passo4')}>
+                            <TouchableOpacity style={styles.btnBalaoTrilhaR} onPress={() => props.setTela('Passo4')}>
                                 <Image style={styles.iconEtapaTrilha} source={require('./assets/newIcons/trilha/etp4.png')} ></Image>
                             </TouchableOpacity>
                             <Text style={{ left: 125, paddingTop: 10, color: 'white', fontFamily: 'Inter_700Bold' }}>Passo 4</Text>
                         </View>
                         <View>
-                            <TouchableOpacity style={styles.btnBalaoTrilhaL} onPress={()=>props.setTela('Passo5')}>
+                            <TouchableOpacity style={styles.btnBalaoTrilhaL} onPress={() => props.setTela('Passo5')}>
                                 <Image style={styles.iconEtapaTrilha} source={require('./assets/newIcons/trilha/etp5.png')} ></Image>
                             </TouchableOpacity>
                             <Text style={{ right: 56, paddingTop: 10, color: 'white', fontFamily: 'Inter_700Bold' }}>Passo 5</Text>
                         </View>
                         <View>
-                            <TouchableOpacity style={styles.btnBalaoTrilhaR}>
+                            <TouchableOpacity style={styles.btnBalaoTrilhaR} onPress={() => props.setTela('Passo6')}>
                                 <Image style={styles.iconEtapaTrilha} source={require('./assets/newIcons/trilha/etp6.png')} ></Image>
                             </TouchableOpacity>
                             <Text style={{ left: 125, paddingTop: 10, color: 'white', fontFamily: 'Inter_700Bold' }}>Passo 6</Text>

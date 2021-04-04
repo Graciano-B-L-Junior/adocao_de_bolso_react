@@ -62,19 +62,19 @@ export default function Trilha(props) {
                             <Text style={{ left: 125, paddingTop: 10, color: 'white', fontFamily: 'Inter_700Bold' }}>Passo 6</Text>
                         </View>
                         <View>
-                            <TouchableOpacity style={styles.btnBalaoTrilhaL} onPress={() => props.setTela('Passo6')}>
+                            <TouchableOpacity style={styles.btnBalaoTrilhaL} onPress={() => props.setTela('Passo7')}>
                                 <Image style={styles.iconEtapaTrilha} source={require('./assets/newIcons/trilha/etp7.png')} ></Image>
                             </TouchableOpacity>
                             <Text style={{ right: 56, paddingTop: 10, color: 'white', fontFamily: 'Inter_700Bold' }}>Passo 7</Text>
                         </View>
                         <View>
-                            <TouchableOpacity style={styles.btnBalaoTrilhaR} onPress={() => props.setTela('Passo6')}>
+                            <TouchableOpacity style={styles.btnBalaoTrilhaR} onPress={() => props.setTela('Passo8')}>
                                 <Image style={styles.iconEtapaTrilha} source={require('./assets/newIcons/trilha/etp8.png')} ></Image>
                             </TouchableOpacity>
                             <Text style={{ left: 125, paddingTop: 10, color: 'white', fontFamily: 'Inter_700Bold' }}>Passo 8</Text>
                         </View>
                         <View>
-                            <TouchableOpacity style={styles.btnBalaoTrilhaL} onPress={() => props.setTela('Passo6')}>
+                            <TouchableOpacity style={styles.btnBalaoTrilhaL} onPress={() => props.setTela('Passo9')}>
                                 <Image style={styles.iconEtapaTrilha} source={require('./assets/newIcons/trilha/etp9.png')} ></Image>
                             </TouchableOpacity>
                             <Text style={{ right: 56, paddingTop: 10, color: 'white', fontFamily: 'Inter_700Bold' }}>Passo 9</Text>

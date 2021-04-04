@@ -30,6 +30,9 @@ import Passo3 from './passosTrilha/Passo3';
 import Passo4 from './passosTrilha/Passo4';
 import Passo5 from './passosTrilha/Passo5';
 import Passo6 from './passosTrilha/Passo6';
+import Passo7 from './passosTrilha/Passo7';
+import Passo8 from './passosTrilha/Passo8';
+import Passo9 from './passosTrilha/Passo9';
 
 
 
@@ -222,6 +225,21 @@ export default function App() {
     else if(tela == 'Passo6'){
       return(
         <Passo6 tela={tela} setTela={setTela}></Passo6>
+      )
+    }
+    else if(tela == 'Passo7'){
+      return(
+        <Passo7 tela={tela} setTela={setTela}></Passo7>
+      )
+    }
+    else if(tela == 'Passo8'){
+      return(
+        <Passo8 tela={tela} setTela={setTela}></Passo8>
+      )
+    }
+    else if(tela == 'Passo9'){
+      return(
+        <Passo9 tela={tela} setTela={setTela}></Passo9>
       )
     }
     else if (tela == 'Contato') {

@@ -78,9 +78,9 @@ export default function Passo2(props) {
                             </View>
                         </View>
 
-                        <View style={styles.modalDisplay}>
-                            <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
-                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', padding: 40 }}>
+                        <View style={styles.modalDisplay3}>
+                            <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', padding: 20 }}>
                                     Sabe qual a documentação necessária para fazer cadastro no fórum?
                             </Text>
                             </View>
@@ -136,9 +136,9 @@ export default function Passo2(props) {
                             </View>
                         </View>
 
-                        <View style={styles.modalDisplay}>
-                            <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
-                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', padding: 40 }}>
+                        <View style={styles.modalDisplay3}>
+                            <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', padding: 20 }}>
                                     Sabe qual a documentação necessária para fazer cadastro no fórum?
                             </Text>
                             </View>
@@ -265,9 +265,9 @@ export default function Passo2(props) {
                             </View>
                         </View>
 
-                        <View style={styles.modalDisplay}>
-                            <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
-                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', padding: 40 }}>
+                        <View style={styles.modalDisplay3}>
+                            <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+                                <Text style={{ color: '#f7f7f7', fontFamily: 'Inter_700Bold', textAlign: 'justify', padding: 20 }}>
                                     Sabe qual a documentação necessária para fazer cadastro no fórum?
                             </Text>
                             </View>

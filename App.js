@@ -44,11 +44,17 @@ export default function App() {
   const getUsuarios = async () => {
     try {
       const value = await AsyncStorage.getItem('usuarios')
-      
-      const result = JSON.parse(value);
-      setUsuarios(result)  
+
+      if(value == null){
+        await AsyncStorage.setItem('usuarios',JSON.stringify(usuarios))
+
+      }else{
+        const result = JSON.parse(value)
+        setUsuarios(result)
+
+      } 
     } catch (e) {
-      //console.warn(e)
+
     }
   }
   let [fontsLoaded] = useFonts({
@@ -109,6 +115,8 @@ export default function App() {
     }
   )
 
+  const [usuarioAtual,setUsuarioAtual] =useState({})
+
   const [novoUsuarioNome, setNovoUsuarioNome] = useState('')
   const [novoUsuarioEmail, setNovoUsuarioEmail] = useState('')
   const [novoUsuarioSenha, setNovoUsuarioSenha] = useState('')
@@ -121,17 +129,20 @@ export default function App() {
 
   function Logar(usuario, senha) {
     const allUsers = usuarios;
+    let indice=0;
     let troca = false
-    allUsers.forEach((user) => {
+    allUsers.forEach((user,index) => {
       if (user.email == usuario && user.senha == senha) {
+        indice = index
+        setUsuarioAtual(allUsers[indice])
         troca = true
       }
     })
     if (troca) {
-      Alert.alert("Usuário logado com sucesso")
+      Alert.alert('Usuário logado com sucesso')
       setTela('Trilha')
     } else {
-      Alert.alert("Usuário ou senha incorretos")
+      Alert.alert('Login ou Senha incorretos')
     }
 
   }
@@ -260,7 +271,7 @@ export default function App() {
     }
     else if (tela == 'Perfilusuario') {
       return (
-        <Perfilusuario tela={tela} setTela={setTela}></Perfilusuario>
+        <Perfilusuario usuarioAtual={usuarioAtual} setUsuarioAtual={setUsuarioAtual} tela={tela} setTela={setTela}></Perfilusuario>
       )
     }
     else if (tela == 'DicasCulturais') {

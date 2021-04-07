@@ -24,8 +24,8 @@
 ### Visualizar informações sobre a rede adotiva
 ### Visualizar Dicas culturais
 ### Preenchimento do formulário de contato
+### Alteração dos dados do usuário
 
 ## Requisitos para implementar
 ### Recuperar Senha
 ### Envio do formulário de contato
-### Alteração dos dados do usuário

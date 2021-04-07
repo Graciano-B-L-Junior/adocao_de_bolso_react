@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, Button, TouchableOpacity, TextInput, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Button, TouchableOpacity, TextInput, ScrollView, Alert } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { Picker } from '@react-native-picker/picker';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -9,6 +9,43 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function Perfilusuario(props) {
 
+    const atualizar = ()=>{
+        let novoUsuarioAtual = {
+            nome: novoUsuarioNome,
+            email: novoUsuarioEmail,
+            senha: novoUsuarioSenha,
+            idade: novoUsuarioIdade,
+            estadoCivil: estadoCivil,
+            perfilCrianca: {
+              sexo: sexoCrianca,
+              idade: {
+                idade_0_1: idade_0_1,
+                idade_1_3: idade_1_3,
+                idade_3_5: idade_3_5,
+                idade_5_10: idade_5_10,
+                idade_10_15: idade_10_15,
+                idade_15_18: idade_15_18
+              }
+            }
+          }
+
+          console.warn(novoUsuarioAtual)
+          let indice;
+          const todosUsuarios = props.usuarios
+          todosUsuarios.forEach((el,index)=>{
+              if(el.email == props.usuarioAtual.email && el.senha == props.usuarioAtual.senha){
+                indice=index
+              }
+          })
+
+          delete todosUsuarios[indice]
+          todosUsuarios.push(novoUsuarioAtual)
+          props.setUsuarioAtual(novoUsuarioAtual)
+
+          Alert.alert('Usuario Atualizado')
+          props.setTela('Trilha')
+        
+    }
     
     const [idade_0_1, setIdade_0_1] = useState(false)
     const [idade_1_3, setIdade_1_3] = useState(false)
@@ -34,6 +71,10 @@ export default function Perfilusuario(props) {
         setIdade_5_10(props.usuarioAtual.perfilCrianca.idade.idade_5_10)
         setIdade_10_15(props.usuarioAtual.perfilCrianca.idade.idade_10_15)
         setIdade_15_18(props.usuarioAtual.perfilCrianca.idade.idade_15_18)
+        setNovoUsuarioNome(props.usuarioAtual.nome)
+        setNovoUsuarioSenha(props.usuarioAtual.senha)
+        setNovoUsuarioIdade(props.usuarioAtual.idade)
+        setNovoUsuarioEmail(props.usuarioAtual.email)
     }, [])
     return (
         <View style={styles.container}>
@@ -55,23 +96,23 @@ export default function Perfilusuario(props) {
                         </View>
                         <View style={{ paddingTop: 20 }}>
                             <Text style={{ fontFamily: 'Inter_500Medium', color: 'black', paddingLeft: 15 }}>Nome</Text>
-                            <TextInput style={styles.inputTextStyle} onChangeText={(text) => setNovoUsuarioNome(text)}>{props.usuarioAtual.nome}</TextInput>
+                            <TextInput style={styles.inputTextStyle} onChangeText={(text) => setNovoUsuarioNome(text)}>{novoUsuarioNome}</TextInput>
                         </View>
 
                         <View style={{ paddingTop: 20 }}>
                             <Text style={{ fontFamily: 'Inter_500Medium', color: 'black', paddingLeft: 15 }}>Email</Text>
-                            <TextInput style={styles.inputTextStyle} onChangeText={(text) => setNovoUsuarioEmail(text)}>{props.usuarioAtual.email}</TextInput>
+                            <TextInput style={styles.inputTextStyle} onChangeText={(text) => setNovoUsuarioEmail(text)}>{novoUsuarioEmail}</TextInput>
                         </View>
                         <View style={{ paddingTop: 20 }}>
                             <Text style={{ fontFamily: 'Inter_500Medium', color: 'black', paddingLeft: 15 }}>Senha</Text>
-                            <TextInput style={styles.inputTextStyle} secureTextEntry={true} onChangeText={(text) => setNovoUsuarioSenha(text)}>{props.usuarioAtual.senha}</TextInput>
+                            <TextInput style={styles.inputTextStyle} secureTextEntry={true} onChangeText={(text) => setNovoUsuarioSenha(text)}>{novoUsuarioSenha}</TextInput>
                         </View>
 
                         <Text style={{ paddingTop: 50, fontFamily: 'Inter_500Medium', paddingLeft: 55, color: 'black' }}>Informações pessoais</Text>
 
                         <View style={{ paddingTop: 20 }}>
                             <Text style={{ fontFamily: 'Inter_500Medium', paddingLeft: 15, color: 'black' }} >idade</Text>
-                            <TextInput style={styles.inputTextStyle} numeric keyboardType={'numeric'} onChangeText={(text) => setNovoUsuarioIdade(text)} >{props.usuarioAtual.idade}</TextInput>
+                            <TextInput style={styles.inputTextStyle} numeric keyboardType={'numeric'} onChangeText={(text) => setNovoUsuarioIdade(text)} >{novoUsuarioIdade}</TextInput>
                         </View>
                         <View style={{ paddingTop: 20 }}>
                             <Text style={{ fontFamily: 'Inter_500Medium', paddingLeft: 15, color: 'black' }}>Estado civil</Text>
@@ -195,7 +236,7 @@ export default function Perfilusuario(props) {
                             </View>
                         </View>
                         <View style={{ width: '80%', marginTop: 15, marginBottom: 15, justifyContent: 'center' }}>
-                            <Button title="Atualizar"></Button>
+                            <Button title="Atualizar" onPress={()=>atualizar()}></Button>
                         </View>
                     </View>
                 </View>

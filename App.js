@@ -52,7 +52,8 @@ export default function App() {
         const result = JSON.parse(value)
         setUsuarios(result)
 
-      } 
+      }
+      
     } catch (e) {
 
     }
@@ -131,19 +132,23 @@ export default function App() {
     const allUsers = usuarios;
     let indice=0;
     let troca = false
-    allUsers.forEach((user,index) => {
-      if (user.email == usuario && user.senha == senha) {
-        indice = index
+
+    
+    for(let i=0;i<allUsers.length;i++){
+      if (allUsers[i].email == usuario && allUsers[i].senha == senha) {
+        indice = i
         setUsuarioAtual(allUsers[indice])
         troca = true
       }
-    })
+    }
+    
     if (troca) {
       Alert.alert('Usuário logado com sucesso')
       setTela('Trilha')
     } else {
       Alert.alert('Login ou Senha incorretos')
     }
+    
 
   }
   useEffect(() => {
@@ -271,7 +276,7 @@ export default function App() {
     }
     else if (tela == 'Perfilusuario') {
       return (
-        <Perfilusuario usuarioAtual={usuarioAtual} setUsuarioAtual={setUsuarioAtual} tela={tela} setTela={setTela}></Perfilusuario>
+        <Perfilusuario usuarioAtual={usuarioAtual} setUsuarioAtual={setUsuarioAtual} tela={tela} setTela={setTela} usuarios={usuarios} setUsuarios={setUsuarios}></Perfilusuario>
       )
     }
     else if (tela == 'DicasCulturais') {

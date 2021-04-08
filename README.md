@@ -13,9 +13,9 @@
 ### [Adoção de bolso](https://drive.google.com/file/d/1kC1nefpbMk8rcPbCv5yBol0ESOHm1Nnw/view?usp=sharing)
 
 ## Requisitos implementados
-### Login
+### Login (dados são locais dentro do aparelho, aplicação não possui banco de dados)
 ### Verificar login de usuário
-### Cadastrar novo usuário
+### Cadastrar novo usuário (persistencia de dados localmente)
 ### Visualizar trilha de adoção
 ### Visualizar passo a passo pela trilha de adoção
 ### Visualizar contatos

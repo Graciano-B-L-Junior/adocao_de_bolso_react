@@ -4,7 +4,7 @@
 ### -Graciano Barbosa
 ### -Daniel Silva Barbosa
 ### -Isis Rayane Cavalcante Lira
-### -Vitória Cristina Medéiros Rocha
+### -Vitória Cristina Medeiros Rocha
 ### -Vitória Priscila Saraiva Alves
 ## Cliente
 ### -Rede adotiva

@@ -81,9 +81,6 @@ export default function Trilha(props) {
                         </View>
                         <View style={{ paddingBottom: 100 }}></View>
                     </View>
-                    <View style={{position:'absolute',top:0,left:10,width:'100%',height:'100%'}}>
-                        <Image source={require('./assets/trilha.png')} style={{width:'100%',height:'100%'}}></Image>
-                    </View>
                 </ScrollView>
                 <View style={styles.bottomNav}>
                     <TouchableOpacity style={styles.btnInfo} onPress={() => props.setTela('DicasCulturais')}>

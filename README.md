@@ -3,7 +3,7 @@
 ## Equipe Nós e as Vitórias
 ### -Graciano Barbosa
 ### -Daniel Silva Barbosa
-### -Isys Rayane Cavalcante Lira
+### -Isis Rayane Cavalcante Lira
 ### -Vitória Cristina Medéiros Rocha
 ### -Vitória Priscila Saraiva Alves
 ## Cliente

@@ -12,6 +12,9 @@
 ## Link para baixar o projeto em android
 ### [Adoção de bolso](https://drive.google.com/file/d/1kC1nefpbMk8rcPbCv5yBol0ESOHm1Nnw/view?usp=sharing)
 
+## Link para assistir um vídeo do projeto funcionando
+### [Vídeo adoção de bolso](https://drive.google.com/file/d/1BSYxwJOwg_oRfpbF9IxRsf_d-GeBQ3oo/view?usp=sharing)
+
 ## Requisitos implementados
 ### Login (dados são locais dentro do aparelho, aplicação não possui banco de dados)
 ### Verificar login de usuário

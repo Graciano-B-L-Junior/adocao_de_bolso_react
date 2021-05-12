@@ -1,5 +1,5 @@
 # Adoção de bolso - aplicativo criado para atender a rede adotiva
-# Projeto criado como pré-requisito para aprovação da caderia de projeto integrado 1 do curso de Sistemas e mídias digitais da Universidade Federal do Ceará
+# Projeto criado como pré-requisito para aprovação da cadeira de projeto integrado 1 do curso de Sistemas e mídias digitais da Universidade Federal do Ceará
 ## Equipe Nós e as Vitórias
 ### -Graciano Barbosa
 ### -Daniel Silva Barbosa
